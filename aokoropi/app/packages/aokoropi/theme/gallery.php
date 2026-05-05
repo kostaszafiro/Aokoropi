@@ -1,3 +1,3 @@
 <@ snippets/header.php @>
-<main class="page active" id="gallery-page"><section class="section"><div class="section-header"><span class="section-tag">Gallery</span><h2>@{ title }</h2><div class="gold-line"></div><p class="section-lead">@{ textTeaser }</p></div>@{ +main }</section></main>
+<main class="page active" id="gallery-page"><div class="section"><div class="section-header"><span class="section-tag">Gallery</span><h2>Φωτογραφίες</h2><div class="gold-line"></div></div><div class="gallery-grid"><div class="gallery-item wide" style="grid-row:span 2;"><div class="gallery-placeholder">🖼️<p>Κύρια φωτογραφία</p></div></div><div class="gallery-item"><div class="gallery-placeholder">🖼️<p>Φωτογραφία</p></div></div></div><div class="gallery-note">📌 Placeholder gallery blocks μέχρι να μπουν φωτογραφίες.</div></div></main>
 <@ snippets/footer.php @>
