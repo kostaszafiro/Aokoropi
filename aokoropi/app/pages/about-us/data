@@ -1,0 +1,15 @@
+{
+    "draft": [],
+    "published": {
+        "title": "ABOUT US",
+        "private": false,
+        "template": "page",
+        "slug": "about-us",
+        "theme": "aokoropi/theme",
+        "date": "2026-05-05T17:05:10+00:00",
+        ":created": "2026-05-05T17:05:10+00:00",
+        ":lastModified": "2026-05-05T17:05:10+00:00",
+        ":automadVersion": "2.0.0-beta.28",
+        ":lastPublished": "2026-05-05T17:05:20+00:00"
+    }
+}

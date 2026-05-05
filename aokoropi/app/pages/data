@@ -1,6 +1,6 @@
 {
     "draft": {
-        "title": "Make it Yours",
+        "title": "AO KOROPI",
         "checkboxHideTitle": "1",
         "checkboxHidePreviousAndNextPageNavigation": "1",
         "checkboxCompactLayout": "1",
@@ -148,9 +148,8 @@
         "theme": "aokoropi/theme",
         "private": false,
         ":created": "2023-02-17T10:36:01+00:00",
-        ":lastModified": "2026-05-05T16:17:37+00:00",
-        ":automadVersion": "2.0.0-beta.28",
-        ":lastPublished": "2026-05-05T16:17:39+00:00"
+        ":lastModified": "2026-05-05T17:03:23+00:00",
+        ":automadVersion": "2.0.0-beta.28"
     },
     "published": {
         "title": "Make it Yours",
