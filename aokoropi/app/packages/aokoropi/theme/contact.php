@@ -1,3 +1,13 @@
 <@ snippets/header.php @>
-<main class="page active" id="contact-page"><div class="section"><div class="section-header"><span class="section-tag">Επικοινωνία</span><h2>Ελάτε<br>στην Οικογένειά μας</h2><div class="gold-line"></div><p class="section-lead">Μη διστάσεις να επικοινωνήσεις μαζί μας για εγγραφές, πληροφορίες ή οτιδήποτε θέλεις να μάθεις για την ακαδημία.</p></div><div class="contact-wrap"><div><div class="contact-info-block"><div class="contact-item"><div class="contact-icon">📞</div><div class="contact-item-text"><label>Τηλέφωνο</label><a href="tel:2106622763">210 6622763</a><br><a href="tel:6996971765">699 6971765</a></div></div><div class="contact-item"><div class="contact-icon">✉️</div><div class="contact-item-text"><label>Email</label><a href="mailto:aokoropiou2@gmail.com">aokoropiou2@gmail.com</a></div></div></div></div><div class="whatsapp-cta"><h3>Εγγραφή & Πληροφορίες</h3><p>Επικοινώνησε μαζί μας άμεσα μέσω WhatsApp ή τηλεφωνικά.</p><a href="https://wa.me/306996971765" target="_blank" class="btn-whatsapp">💬 Μήνυμα στο WhatsApp</a><a href="tel:6996971765" class="btn-call">📞 Κάλεσε μας Τώρα</a></div></div></div></main>
+<main class="page active" id="contact-page">
+  <section class="section">
+    <div class="section-header">
+      <span class="section-tag">Επικοινωνία</span>
+      <h2>@{ title }</h2>
+      <div class="gold-line"></div>
+      <@ if @{ textTeaser } @><p class="section-lead">@{ textTeaser }</p><@ end @>
+    </div>
+    @{ +main }
+  </section>
+</main>
 <@ snippets/footer.php @>

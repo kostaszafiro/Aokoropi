@@ -1,25 +1,105 @@
 {
-    "draft": [],
-    "published": {
-        "components": [
-            {
-                "id": "GP0ffng9y3gx5kSiD9ik1bNMnNsrsmN9",
-                "name": "Example Component",
-                "blocks": [
-                    {
-                        "id": "NgfQ4MU8dWhegIOybTwXPGnySwfz2hHB",
-                        "type": "callout",
-                        "data": {
-                            "title": "Hey",
-                            "text": "This example component shares content with the one beside it. Changes in the <a href=\"/dashboard/components\">component editor</a> update all instances automatically, and you can place anything here."
-                        },
-                        "tunes": []
-                    }
-                ],
-                "collapsed": false
-            }
+  "draft": [],
+  "published": {
+    "components": [
+      {
+        "id": "about-story",
+        "name": "About · Story",
+        "blocks": [
+          {"id":"about-story-1","type":"raw","data":{"code":"<div class=\"about-grid\"><div><div class=\"about-text\"><p>Ο Αθλητικός Όμιλος Κορωπίου 1903 αποτελεί έναν από τους πιο ιστορικούς και αναγνωρίσιμους αθλητικούς συλλόγους της περιοχής των Μεσογείων.</p><p>Σήμερα, ο ΑΟ Κορωπίου βρίσκεται σε μια νέα εποχή ανανέωσης με όραμα για το μέλλον.</p><p>Η φιλοσοφία μας συνοψίζεται στη φράση:</p></div><div class=\"about-quote\">«Χτίζουμε ανθρώπους,<br>όχι μόνο παίκτες»</div></div><div class=\"about-visual\"><div class=\"about-logo-wrap\"><div class=\"about-logo-kids\"></div><div class=\"founded-badge\">Ιδρύθηκε το 1903</div></div></div></div>"},"tunes":[]}
         ],
-        ":automadVersion": "2.0.0-alpha.53",
-        ":lastPublished": "2025-12-25T13:48:42+00:00"
-    }
+        "collapsed": false
+      },
+      {
+        "id": "about-values",
+        "name": "About · Values",
+        "blocks": [
+          {"id":"about-values-1","type":"raw","data":{"code":"<div class=\"about-text\"><p>Με βασικές αξίες την προσπάθεια, τον σεβασμό, την πειθαρχία και την ομαδικότητα, ο ΑΟ Κορωπίου φιλοδοξεί να αποτελέσει ξανά σημείο αναφοράς.</p></div><div class=\"about-values\"><div class=\"value-chip\"><span>⚡ Προσπάθεια</span></div><div class=\"value-chip\"><span>🤝 Σεβασμός</span></div><div class=\"value-chip\"><span>🎯 Πειθαρχία</span></div><div class=\"value-chip\"><span>👥 Ομαδικότητα</span></div></div>"},"tunes":[]}
+        ],
+        "collapsed": false
+      },
+      {
+        "id": "facilities-intro",
+        "name": "Facilities · Intro",
+        "blocks": [
+          {"id":"fac-intro-1","type":"raw","data":{"code":"<div style=\"border-radius:12px;overflow:hidden;margin-bottom:2rem;position:relative;height:380px;background:#fff;color:var(--gray);display:flex;align-items:center;justify-content:center;border:2px dashed var(--lightgray);\">[Placeholder εικόνας σταδίου]</div><div class=\"facilities-intro\"><h3>Η Έδρα μας</h3><p>Ο Αθλητικός Όμιλος Κορωπίου 1903 αγωνίζεται και προπονείται στο <span class=\"stadium-name\">Δημοτικό Στάδιο Κορωπίου «Αντώνης Πρίφτης»</span>.</p></div>"},"tunes":[]}
+        ],
+        "collapsed": false
+      },
+      {
+        "id": "facilities-feature-cards",
+        "name": "Facilities · Feature Cards",
+        "blocks": [
+          {"id":"fac-cards-1","type":"raw","data":{"code":"<div class=\"facilities-cards\"><div class=\"fac-card\"><div class=\"fac-icon\">🏟️</div><h4>Κύριο Γήπεδο</h4><p>Πλήρους διαστάσεων γήπεδο για αγώνες πρωταθλήματος και προπονήσεις.</p></div><div class=\"fac-card\"><div class=\"fac-icon\">⚽</div><h4>Χώροι Ακαδημιών</h4><p>Ειδικά διαμορφωμένοι χώροι για προπονήσεις ακαδημιών.</p></div><div class=\"fac-card\"><div class=\"fac-icon\">🚿</div><h4>Αποδυτήρια</h4><p>Σύγχρονες εγκαταστάσεις αποδυτηρίων για αθλητές.</p></div></div>"},"tunes":[]}
+        ],
+        "collapsed": false
+      },
+      {
+        "id": "programs-intro",
+        "name": "Programs · Intro",
+        "blocks": [
+          {"id":"prog-intro-1","type":"raw","data":{"code":"<div style=\"display:flex;align-items:center;gap:16px;margin-bottom:2.5rem;\"><p style=\"font-size:0.95rem;color:var(--gray);line-height:1.7;max-width:500px;\">Η ακαδημία μας υποδέχεται αθλητές από 4 έως 17 ετών με εξειδικευμένα προγράμματα για κάθε αναπτυξιακό στάδιο.</p></div>"},"tunes":[]}
+        ],
+        "collapsed": false
+      },
+      {
+        "id": "programs-card",
+        "name": "Programs · Program Card",
+        "blocks": [
+          {"id":"prog-card-1","type":"raw","data":{"code":"<div class=\"programs-grid\"><div class=\"prog-card\" data-age=\"Κ7\"><div class=\"prog-age\">5 – 6</div><div class=\"prog-name\">Κ7 · Under 7</div><div class=\"prog-desc\"><div class=\"prog-detail\"><span class=\"prog-detail-label\">Στόχος:</span> Πρώτη επαφή με το ποδόσφαιρο μέσα από το παιχνίδι</div><div class=\"prog-detail\"><span class=\"prog-detail-label\">Έμφαση:</span> Κινητικότητα, συντονισμός, εξοικείωση με την μπάλα</div></div></div></div>"},"tunes":[]}
+        ],
+        "collapsed": false
+      },
+      {
+        "id": "programs-philosophy",
+        "name": "Programs · Philosophy",
+        "blocks": [
+          {"id":"prog-philo-1","type":"raw","data":{"code":"<div class=\"academy-philosophy\"><div class=\"philosophy-icon\">🔷</div><h3>Φιλοσοφία Ακαδημίας</h3><p>Η Ακαδημία λειτουργεί με στόχο τη συνολική ανάπτυξη των παιδιών.</p><div class=\"philosophy-quote\">«Χτίζουμε ανθρώπους, όχι μόνο παίκτες»</div></div>"},"tunes":[]}
+        ],
+        "collapsed": false
+      },
+      {
+        "id": "coaches-intro",
+        "name": "Coaches · Intro",
+        "blocks": [
+          {"id":"coach-intro-1","type":"paragraph","data":{"code":"Έμπειροι προπονητές με αγάπη για το παιδί και πάθος για το ποδόσφαιρο."},"tunes":[]}
+        ],
+        "collapsed": false
+      },
+      {
+        "id": "coaches-card",
+        "name": "Coaches · Coach Card",
+        "blocks": [
+          {"id":"coach-card-1","type":"raw","data":{"code":"<div class=\"coaches-grid\"><div class=\"coach-card\"><div class=\"coach-photo\"><div class=\"coach-photo-placeholder\">ΠΡ</div></div><div class=\"coach-info\"><div class=\"coach-name\">Προπονητής 1</div><div class=\"coach-role\">Τεχνικός Διευθυντής</div><div class=\"coach-bio\">Προσθέστε βιογραφικό σημείωμα για τον προπονητή εδώ.</div></div></div></div>"},"tunes":[]}
+        ],
+        "collapsed": false
+      },
+      {
+        "id": "gallery-placeholder-grid",
+        "name": "Gallery · Placeholder Grid",
+        "blocks": [
+          {"id":"gallery-grid-1","type":"raw","data":{"code":"<div class=\"gallery-grid\"><div class=\"gallery-item wide\" style=\"grid-row:span 2;\"><div class=\"gallery-placeholder\">🖼️<p>Κύρια φωτογραφία</p></div></div><div class=\"gallery-item\"><div class=\"gallery-placeholder\">🖼️<p>Φωτογραφία</p></div></div></div><div class=\"gallery-note\">📌 Placeholder gallery blocks μέχρι να μπουν φωτογραφίες.</div>"},"tunes":[]}
+        ],
+        "collapsed": false
+      },
+      {
+        "id": "contact-info",
+        "name": "Contact · Info",
+        "blocks": [
+          {"id":"contact-info-1","type":"raw","data":{"code":"<div class=\"contact-wrap\"><div><div class=\"contact-info-block\"><div class=\"contact-item\"><div class=\"contact-icon\">📞</div><div class=\"contact-item-text\"><label>Τηλέφωνο</label><a href=\"tel:2106622763\">210 6622763</a><br><a href=\"tel:6996971765\">699 6971765</a></div></div><div class=\"contact-item\"><div class=\"contact-icon\">✉️</div><div class=\"contact-item-text\"><label>Email</label><a href=\"mailto:aokoropiou2@gmail.com\">aokoropiou2@gmail.com</a></div></div></div></div></div>"},"tunes":[]}
+        ],
+        "collapsed": false
+      },
+      {
+        "id": "contact-cta",
+        "name": "Contact · CTA",
+        "blocks": [
+          {"id":"contact-cta-1","type":"raw","data":{"code":"<div class=\"whatsapp-cta\"><h3>Εγγραφή & Πληροφορίες</h3><p>Επικοινώνησε μαζί μας άμεσα μέσω WhatsApp ή τηλεφωνικά.</p><a href=\"https://wa.me/306996971765\" target=\"_blank\" class=\"btn-whatsapp\">💬 Μήνυμα στο WhatsApp</a><a href=\"tel:6996971765\" class=\"btn-call\">📞 Κάλεσε μας Τώρα</a></div>"},"tunes":[]}
+        ],
+        "collapsed": false
+      }
+    ],
+    ":automadVersion": "2.0.0-beta.28",
+    ":lastPublished": "2026-05-05T00:00:00+00:00"
+  }
 }

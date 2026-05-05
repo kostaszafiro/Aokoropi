@@ -11,7 +11,7 @@
                     "id": "vqEmK6nU6LCYbdyra-vi-Nfzar7SM5iv",
                     "type": "paragraph",
                     "data": {
-                        "text": "Components are sections you can reuse across multiple pages. They maintain consistency and speed up your workflow.",
+                        "code": "Components are sections you can reuse across multiple pages. They maintain consistency and speed up your workflow.",
                         "large": true
                     },
                     "tunes": []

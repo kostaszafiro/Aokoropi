@@ -23,7 +23,7 @@
                                                     "id": "S5qzMl0nwgQIeIKc4-AlMB2aPKBqrDYZ",
                                                     "type": "header",
                                                     "data": {
-                                                        "text": "TRY TRY TR Y",
+                                                        "code": "TRY TRY TR Y",
                                                         "level": 1
                                                     },
                                                     "tunes": {
@@ -42,7 +42,7 @@
                                                     "id": "rBMt6ahZ1mFxqZOrI4sFwV3F2K9xcEn_",
                                                     "type": "paragraph",
                                                     "data": {
-                                                        "text": "LOREM TRYTYRYTRYTRYYRTYRTYYRTYRTYTRYRT",
+                                                        "code": "LOREM TRYTYRYTRYTRYYRTYRTYYRTYRTYTRYRT",
                                                         "large": false
                                                     },
                                                     "tunes": {
@@ -59,7 +59,7 @@
                                                     "id": "n0rgHVMIW7iVWGctVkuiCAdFPnv1buGz",
                                                     "type": "paragraph",
                                                     "data": {
-                                                        "text": "Built for clarity, performance, and restraint. Automad keeps content simple and structure intentional.",
+                                                        "code": "Built for clarity, performance, and restraint. Automad keeps content simple and structure intentional.",
                                                         "large": false
                                                     },
                                                     "tunes": {
@@ -175,7 +175,7 @@
                                                     "id": "S5qzMl0nwgQIeIKc4-AlMB2aPKBqrDYZ",
                                                     "type": "header",
                                                     "data": {
-                                                        "text": "<am-inline-font-size style=\"font-size: 130%;\">Make it Yours</am-inline-font-size>",
+                                                        "code": "<am-inline-font-size style=\"font-size: 130%;\">Make it Yours</am-inline-font-size>",
                                                         "level": 1
                                                     },
                                                     "tunes": {
@@ -194,7 +194,7 @@
                                                     "id": "sw_CwIxrp7vjUiAp_AfP1iBZ3IqXk1TT",
                                                     "type": "paragraph",
                                                     "data": {
-                                                        "text": "Automad is up and running. Log in to the <a href=\"/dashboard\">dashboard</a> and explore the Quick Start&nbsp;Guide. You\u2019ll learn how blocks work, how layouts come together, how pagelists are configured, and how components are built. The rest is just content.&nbsp;",
+                                                        "code": "Automad is up and running. Log in to the <a href=\"/dashboard\">dashboard</a> and explore the Quick Start&nbsp;Guide. You\u2019ll learn how blocks work, how layouts come together, how pagelists are configured, and how components are built. The rest is just content.&nbsp;",
                                                         "large": true
                                                     },
                                                     "tunes": {
@@ -241,7 +241,7 @@
                                                     "id": "n0rgHVMIW7iVWGctVkuiCAdFPnv1buGz",
                                                     "type": "paragraph",
                                                     "data": {
-                                                        "text": "Built for clarity, performance, and restraint. Automad keeps content simple and structure intentional.",
+                                                        "code": "Built for clarity, performance, and restraint. Automad keeps content simple and structure intentional.",
                                                         "large": false
                                                     },
                                                     "tunes": {

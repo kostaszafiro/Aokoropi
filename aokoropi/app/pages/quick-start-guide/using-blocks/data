@@ -11,7 +11,7 @@
                     "id": "8TYstm3qORgMakfLDYdJJXKRptZKBgWN",
                     "type": "paragraph",
                     "data": {
-                        "text": "Blocks are the building units of every page. They can hold text, images, galleries, slideshows, or even other blocks, letting you mix and match to create almost anything.",
+                        "code": "Blocks are the building units of every page. They can hold text, images, galleries, slideshows, or even other blocks, letting you mix and match to create almost anything.",
                         "large": true
                     },
                     "tunes": []
@@ -20,7 +20,7 @@
                     "id": "Q7zrdn_FJDFYCnPE_EtVj8Zl8UonAsFa",
                     "type": "header",
                     "data": {
-                        "text": "Basic Blocks",
+                        "code": "Basic Blocks",
                         "level": 2
                     },
                     "tunes": []
@@ -36,7 +36,7 @@
                                     "id": "UKR7B8Fr5jdOOFOlrYVQtU2oR42JVeN2",
                                     "type": "paragraph",
                                     "data": {
-                                        "text": "Aside from headings and paragraphs, Automad ships with a diverse selection of text-based content block types.",
+                                        "code": "Aside from headings and paragraphs, Automad ships with a diverse selection of text-based content block types.",
                                         "large": false
                                     },
                                     "tunes": {
@@ -54,7 +54,7 @@
                                     "type": "callout",
                                     "data": {
                                         "title": "Important",
-                                        "text": "This is a callout box that makes important content stand out."
+                                        "code": "This is a callout box that makes important content stand out."
                                     },
                                     "tunes": {
                                         "layout": {
@@ -84,7 +84,7 @@
                                     "id": "26jPjYWI3QUGpPneOPzn2OwEFs4oiVSq",
                                     "type": "paragraph",
                                     "data": {
-                                        "text": "Quotes are presented with visual emphasis.",
+                                        "code": "Quotes are presented with visual emphasis.",
                                         "large": false
                                     },
                                     "tunes": {
@@ -101,7 +101,7 @@
                                     "id": "4vywBxI2uxrEtQrDOGRmq_j_-wzaixMS",
                                     "type": "quote",
                                     "data": {
-                                        "text": "Have the courage to follow your heart and intuition. They somehow already know what you truly want to become. Everything else is secondary.",
+                                        "code": "Have the courage to follow your heart and intuition. They somehow already know what you truly want to become. Everything else is secondary.",
                                         "caption": "Steve Jobs"
                                     },
                                     "tunes": {
@@ -132,7 +132,7 @@
                                     "id": "6Hk6WnLzOSYhojI1jq3OFuJIej3BfvI6",
                                     "type": "paragraph",
                                     "data": {
-                                        "text": "Lists can be nested, they can be ordered or unordered.",
+                                        "code": "Lists can be nested, they can be ordered or unordered.",
                                         "large": false
                                     },
                                     "tunes": {
@@ -198,7 +198,7 @@
                                     "id": "dv9yg-NCyj_UCN2Dds_D4skjnArdpiWV",
                                     "type": "paragraph",
                                     "data": {
-                                        "text": "Tables can be used to display structured data.",
+                                        "code": "Tables can be used to display structured data.",
                                         "large": false
                                     },
                                     "tunes": {
@@ -264,7 +264,7 @@
                                     "id": "SGvqngLHFooIeaKUFQyGGTznGa5EkaIJ",
                                     "type": "paragraph",
                                     "data": {
-                                        "text": "Add images and videos uploaded to your site or embedded from external sources.",
+                                        "code": "Add images and videos uploaded to your site or embedded from external sources.",
                                         "large": false
                                     },
                                     "tunes": {
@@ -301,7 +301,7 @@
                                     "id": "GG80Uj5Abe2XiKZGSLRkmLZFjsKcn_NF",
                                     "type": "paragraph",
                                     "data": {
-                                        "text": "Images can include captions and link to other pages.",
+                                        "code": "Images can include captions and link to other pages.",
                                         "large": false
                                     },
                                     "tunes": {
@@ -339,7 +339,7 @@
                                     "id": "Rg4imjhFPiIfDJBYBkgUo0JwyEFUSPER",
                                     "type": "paragraph",
                                     "data": {
-                                        "text": "Video settings like autoplay and looping are controlled via the block settings in the top-left corner.",
+                                        "code": "Video settings like autoplay and looping are controlled via the block settings in the top-left corner.",
                                         "large": false
                                     },
                                     "tunes": {
@@ -370,7 +370,7 @@
                                     "id": "Car9Z9y7pg15pB1tnjQmqBtFjuRpH5VP",
                                     "type": "paragraph",
                                     "data": {
-                                        "text": "Collections of images can be showcased using masonry or grid galleries, as well as slideshow blocks.",
+                                        "code": "Collections of images can be showcased using masonry or grid galleries, as well as slideshow blocks.",
                                         "large": false
                                     },
                                     "tunes": {
@@ -436,7 +436,7 @@
                                     "id": "_cGtla9flRBHhVkhAlrcIGVWKG1iC-O9",
                                     "type": "paragraph",
                                     "data": {
-                                        "text": "Automad supports many external platforms. Paste a link to embed videos or streams directly into your page.",
+                                        "code": "Automad supports many external platforms. Paste a link to embed videos or streams directly into your page.",
                                         "large": false
                                     },
                                     "tunes": {
@@ -533,7 +533,7 @@
                                     "id": "l_RGinp5xZuIqR2n-DRFJtxJBTStpULW",
                                     "type": "paragraph",
                                     "data": {
-                                        "text": "Use buttons to create clear calls to action.",
+                                        "code": "Use buttons to create clear calls to action.",
                                         "large": false
                                     },
                                     "tunes": {
@@ -591,7 +591,7 @@
                                     "id": "SjF0vqPBmmIdx8pvZumx1LUT5wrC573X",
                                     "type": "paragraph",
                                     "data": {
-                                        "text": "A table of contents provides dynamic navigation for the current page.",
+                                        "code": "A table of contents provides dynamic navigation for the current page.",
                                         "large": false
                                     },
                                     "tunes": {
@@ -673,7 +673,7 @@
                                     "id": "fhIeVx8WlHjC0NFbx2a1iLfL1C7-MVYK",
                                     "type": "paragraph",
                                     "data": {
-                                        "text": "Add code snippets with syntax highlighting. Choose a theme per page or globally.",
+                                        "code": "Add code snippets with syntax highlighting. Choose a theme per page or globally.",
                                         "large": false
                                     },
                                     "tunes": {
@@ -708,7 +708,7 @@
                                     "id": "DCmfLoZbC6JOkA2pdBoAlh06LM7sKWM7",
                                     "type": "paragraph",
                                     "data": {
-                                        "text": "Add basic math with <i>KaTeX</i> for academic purposes.",
+                                        "code": "Add basic math with <i>KaTeX</i> for academic purposes.",
                                         "large": false
                                     },
                                     "tunes": {
@@ -753,7 +753,7 @@
                     "id": "WG_Ecq6GJNvh4PlDbGiLKzwvPnJbFy7V",
                     "type": "header",
                     "data": {
-                        "text": "Advanced Types",
+                        "code": "Advanced Types",
                         "level": 2
                     },
                     "tunes": []
@@ -762,7 +762,7 @@
                     "id": "pNHnY1dMuAezRu0Cr_O3YU8fuT7DEQtg",
                     "type": "paragraph",
                     "data": {
-                        "text": "In addition to the basic blocks, Automad provides more advanced types for complex use cases. <a href=\"/quick-start-guide/creating-layouts\">Layout sections</a>, <a href=\"/quick-start-guide/configuring-pagelists\">pagelists</a>, <a href=\"/quick-start-guide/building-components\">components</a>, template language snippets, an email contact form, and raw HTML or Markdown blocks give you greater flexibility and control.",
+                        "code": "In addition to the basic blocks, Automad provides more advanced types for complex use cases. <a href=\"/quick-start-guide/creating-layouts\">Layout sections</a>, <a href=\"/quick-start-guide/configuring-pagelists\">pagelists</a>, <a href=\"/quick-start-guide/building-components\">components</a>, template language snippets, an email contact form, and raw HTML or Markdown blocks give you greater flexibility and control.",
                         "large": false
                     },
                     "tunes": []
