@@ -13,7 +13,7 @@
                     "id": "mol_tBhrC8y-4JFDUOfi_7CsWkZRM_Pn",
                     "type": "paragraph",
                     "data": {
-                        "text": "Read more about Automad in the official docs.",
+                        "code": "Read more about Automad in the official docs.",
                         "large": false
                     },
                     "tunes": []

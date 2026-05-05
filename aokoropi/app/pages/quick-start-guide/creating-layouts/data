@@ -11,7 +11,7 @@
                     "id": "21nt9TMRkGFFUZZxc5mcD92Wjw8hNkab",
                     "type": "paragraph",
                     "data": {
-                        "text": "Layouts define how content flows across your page. Grids and nested sections help you create responsive, balanced designs.",
+                        "code": "Layouts define how content flows across your page. Grids and nested sections help you create responsive, balanced designs.",
                         "large": true
                     },
                     "tunes": {
@@ -31,7 +31,7 @@
                                     "type": "callout",
                                     "data": {
                                         "title": "Hey",
-                                        "text": "The simplest way to use <i>layout sections</i> is to split content into <strong>columns</strong>. Each child element gets a width, allowing columns of different sizes."
+                                        "code": "The simplest way to use <i>layout sections</i> is to split content into <strong>columns</strong>. Each child element gets a width, allowing columns of different sizes."
                                     },
                                     "tunes": {
                                         "layout": {
@@ -53,7 +53,7 @@
                                                     "id": "TzVutOIW0mSgQRYxp5PJ3JIjCIZChMO9",
                                                     "type": "header",
                                                     "data": {
-                                                        "text": "Columns",
+                                                        "code": "Columns",
                                                         "level": 2
                                                     },
                                                     "tunes": {
@@ -113,7 +113,7 @@
                     "id": "_4mQCxfMh2CxiQTDvhy9aN8no1WItoE-",
                     "type": "header",
                     "data": {
-                        "text": "Nesting Sections",
+                        "code": "Nesting Sections",
                         "level": 2
                     },
                     "tunes": []
@@ -122,7 +122,7 @@
                     "id": "JLGhpspkM4xuI8N2QMCYh-6zQ88bGonU",
                     "type": "paragraph",
                     "data": {
-                        "text": "Layout sections become powerful when <i>nested</i>. The example below shows how nesting can be used to build a <i>bento-style</i> layout.",
+                        "code": "Layout sections become powerful when <i>nested</i>. The example below shows how nesting can be used to build a <i>bento-style</i> layout.",
                         "large": false
                     },
                     "tunes": []
@@ -143,7 +143,7 @@
                                                     "id": "NgDKLy7Spb1dJ6bD8f_KHh9levpw9p0J",
                                                     "type": "header",
                                                     "data": {
-                                                        "text": "Bento Box",
+                                                        "code": "Bento Box",
                                                         "level": 2
                                                     },
                                                     "tunes": {
@@ -160,7 +160,7 @@
                                                     "id": "M4VLDSof8FyHGFIMyzbdXrXSbXxOhX3t",
                                                     "type": "paragraph",
                                                     "data": {
-                                                        "text": "The minimum width of elements is defined in the parent layout section. This keeps things <i>responsive</i>.",
+                                                        "code": "The minimum width of elements is defined in the parent layout section. This keeps things <i>responsive</i>.",
                                                         "large": true
                                                     },
                                                     "tunes": {
@@ -233,7 +233,7 @@
                                                                     "type": "callout",
                                                                     "data": {
                                                                         "title": "Hey",
-                                                                        "text": "While the top box is just an image, this one is a deeply <i>nested layout section</i>. This allows for fine-grained, isolated control over its styling."
+                                                                        "code": "While the top box is just an image, this one is a deeply <i>nested layout section</i>. This allows for fine-grained, isolated control over its styling."
                                                                     },
                                                                     "tunes": {
                                                                         "layout": {
@@ -315,7 +315,7 @@
                     "id": "yTpdrR7luxeCoxf1YV7V_KdXP_xcBAVJ",
                     "type": "header",
                     "data": {
-                        "text": "Alignment and Spacing",
+                        "code": "Alignment and Spacing",
                         "level": 2
                     },
                     "tunes": []
@@ -324,7 +324,7 @@
                     "id": "ZuZgXOMDKvQu7V3IU6UGb1-IzrPqdW5F",
                     "type": "paragraph",
                     "data": {
-                        "text": "Alignment and spacing are controlled directly from the section toolbar. You can define gaps and set a minimum child width \u2014 the key to <i>responsive</i> layouts.",
+                        "code": "Alignment and spacing are controlled directly from the section toolbar. You can define gaps and set a minimum child width \u2014 the key to <i>responsive</i> layouts.",
                         "large": false
                     },
                     "tunes": []
@@ -333,7 +333,7 @@
                     "id": "cad1BRaiscsot27THkxuDZzK5CVjKao6",
                     "type": "paragraph",
                     "data": {
-                        "text": "The example below shows how elements align vertically and horizontally. It starts with the vertical defaults, while horizontal alignment uses the <i>\u201cstretch to fill row\u201d</i> option.",
+                        "code": "The example below shows how elements align vertically and horizontally. It starts with the vertical defaults, while horizontal alignment uses the <i>\u201cstretch to fill row\u201d</i> option.",
                         "large": false
                     },
                     "tunes": []
@@ -429,7 +429,7 @@
                     "id": "uBsZt2x2hbZSBmWf4dYo6kmnzcGxT2jn",
                     "type": "paragraph",
                     "data": {
-                        "text": "Now again a similar example, but this time the children are centered vertically.",
+                        "code": "Now again a similar example, but this time the children are centered vertically.",
                         "large": false
                     },
                     "tunes": []
@@ -525,7 +525,7 @@
                     "id": "T9iwDkCmRrpanxU6PqfGjSYNYzNo0qa_",
                     "type": "paragraph",
                     "data": {
-                        "text": "Elements can be distributed horizontally in ways other than <i>stretch</i>, for example <i>\"space around\"</i>. They align at the <i>bottom</i> and both have a width of 1/4.",
+                        "code": "Elements can be distributed horizontally in ways other than <i>stretch</i>, for example <i>\"space around\"</i>. They align at the <i>bottom</i> and both have a width of 1/4.",
                         "large": false
                     },
                     "tunes": []

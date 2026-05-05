@@ -11,7 +11,7 @@
                     "id": "raHbgL2O6MiT3ih1zko7fo5nkUdPMQkS",
                     "type": "paragraph",
                     "data": {
-                        "text": "Images can be added individually or in galleries and slideshows. Use them to bring life and clarity to your pages.",
+                        "code": "Images can be added individually or in galleries and slideshows. Use them to bring life and clarity to your pages.",
                         "large": true
                     },
                     "tunes": []
@@ -94,7 +94,7 @@
                     "id": "IJEDb3wtv2clbNBbksrzheL_4agz8OMR",
                     "type": "paragraph",
                     "data": {
-                        "text": "Galleries support <i>column</i>, <i>row</i>, or <i>grid</i> layouts. This example uses a <i>row-based</i> layout.",
+                        "code": "Galleries support <i>column</i>, <i>row</i>, or <i>grid</i> layouts. This example uses a <i>row-based</i> layout.",
                         "large": false
                     },
                     "tunes": []
@@ -136,7 +136,7 @@
                     "id": "WoYal1jKUvdNN4Yk287_TN0ZOcOc4slp",
                     "type": "paragraph",
                     "data": {
-                        "text": "Use the grid layout to arrange images with generous whitespace.",
+                        "code": "Use the grid layout to arrange images with generous whitespace.",
                         "large": false
                     },
                     "tunes": {

@@ -1,11 +1,103 @@
 {
-  "draft": [],
-  "published": {
-    "title": "Τμήματα",
-    "textTeaser": "Τμήματα υποδομής για κάθε ηλικία και επίπεδο.",
-    "private": false,
-    "template": "programs",
-    "slug": "programs",
-    "theme": "aokoropi/theme"
-  }
+    "draft": {
+        "title": "\u03a4\u03bc\u03ae\u03bc\u03b1\u03c4\u03b1",
+        "textTeaser": "\u03a4\u03bc\u03ae\u03bc\u03b1\u03c4\u03b1 \u03c5\u03c0\u03bf\u03b4\u03bf\u03bc\u03ae\u03c2 \u03b3\u03b9\u03b1 \u03ba\u03ac\u03b8\u03b5 \u03b7\u03bb\u03b9\u03ba\u03af\u03b1 \u03ba\u03b1\u03b9 \u03b5\u03c0\u03af\u03c0\u03b5\u03b4\u03bf.",
+        "private": false,
+        "template": "programs",
+        "slug": "programs",
+        "theme": "aokoropi/theme",
+        "+main": {
+            "blocks": [
+                {
+                    "id": "programs-comp-1",
+                    "type": "component",
+                    "data": {
+                        "id": "programs-intro"
+                    },
+                    "tunes": {
+                        "layout": {
+                            "stretched": false,
+                            "width": null
+                        }
+                    }
+                },
+                {
+                    "id": "programs-comp-2",
+                    "type": "component",
+                    "data": {
+                        "id": "programs-card"
+                    },
+                    "tunes": {
+                        "layout": {
+                            "stretched": false,
+                            "width": null
+                        }
+                    }
+                },
+                {
+                    "id": "IH5WJgOg7ceu56NqsaG0ryRRD004oToT",
+                    "type": "component",
+                    "data": {
+                        "id": "programs-card"
+                    },
+                    "tunes": {
+                        "layout": {
+                            "stretched": false,
+                            "width": null
+                        }
+                    }
+                },
+                {
+                    "id": "programs-comp-3",
+                    "type": "component",
+                    "data": {
+                        "id": "programs-philosophy"
+                    },
+                    "tunes": {
+                        "layout": {
+                            "stretched": false,
+                            "width": null
+                        }
+                    }
+                }
+            ]
+        },
+        ":automadVersion": "2.0.0-beta.28"
+    },
+    "published": {
+        "title": "\u03a4\u03bc\u03ae\u03bc\u03b1\u03c4\u03b1",
+        "textTeaser": "\u03a4\u03bc\u03ae\u03bc\u03b1\u03c4\u03b1 \u03c5\u03c0\u03bf\u03b4\u03bf\u03bc\u03ae\u03c2 \u03b3\u03b9\u03b1 \u03ba\u03ac\u03b8\u03b5 \u03b7\u03bb\u03b9\u03ba\u03af\u03b1 \u03ba\u03b1\u03b9 \u03b5\u03c0\u03af\u03c0\u03b5\u03b4\u03bf.",
+        "private": false,
+        "template": "programs",
+        "slug": "programs",
+        "theme": "aokoropi/theme",
+        "+main": {
+            "blocks": [
+                {
+                    "id": "programs-comp-1",
+                    "type": "component",
+                    "data": {
+                        "id": "programs-intro"
+                    },
+                    "tunes": []
+                },
+                {
+                    "id": "programs-comp-2",
+                    "type": "component",
+                    "data": {
+                        "id": "programs-card"
+                    },
+                    "tunes": []
+                },
+                {
+                    "id": "programs-comp-3",
+                    "type": "component",
+                    "data": {
+                        "id": "programs-philosophy"
+                    },
+                    "tunes": []
+                }
+            ]
+        }
+    }
 }

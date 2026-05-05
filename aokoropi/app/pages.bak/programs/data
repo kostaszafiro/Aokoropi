@@ -1,0 +1,39 @@
+{
+  "draft": [],
+  "published": {
+    "title": "Τμήματα",
+    "textTeaser": "Τμήματα υποδομής για κάθε ηλικία και επίπεδο.",
+    "private": false,
+    "template": "programs",
+    "slug": "programs",
+     "theme": "aokoropi/theme",
+    "+main": {
+      "blocks": [
+        {
+          "id": "programs-comp-1",
+          "type": "component",
+          "data": {
+            "id": "programs-intro"
+          },
+          "tunes": []
+        },
+        {
+          "id": "programs-comp-2",
+          "type": "component",
+          "data": {
+            "id": "programs-card"
+          },
+          "tunes": []
+        },
+        {
+          "id": "programs-comp-3",
+          "type": "component",
+          "data": {
+            "id": "programs-philosophy"
+          },
+          "tunes": []
+        }
+      ]
+    }
+  }
+}

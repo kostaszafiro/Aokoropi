@@ -12,7 +12,7 @@
                     "id": "VVcJ9y-fq8laqX0xHSnr_QohvG6HWc1c",
                     "type": "paragraph",
                     "data": {
-                        "text": "This guide walks you through the core building blocks of Automad. Explore the concepts, see examples, and start building your pages with structure, clarity, and flexibility.",
+                        "code": "This guide walks you through the core building blocks of Automad. Explore the concepts, see examples, and start building your pages with structure, clarity, and flexibility.",
                         "large": true
                     },
                     "tunes": []
@@ -61,7 +61,7 @@
                     "type": "callout",
                     "data": {
                         "title": "Note",
-                        "text": "All chapters are contained under this page. You can remove the Quick Start Guide anytime to start fresh."
+                        "code": "All chapters are contained under this page. You can remove the Quick Start Guide anytime to start fresh."
                     },
                     "tunes": {
                         "spacing": {
