@@ -1,31 +1,82 @@
 {
-  "draft": [],
-  "published": {
-    "title": "Προπονητές",
-    "textTeaser": "Η προπονητική ομάδα της ακαδημίας μας.",
-    "private": false,
-    "template": "coaches",
-    "slug": "coaches",
-     "theme": "aokoropi/theme",
-    "+main": {
-      "blocks": [
-        {
-          "id": "coaches-comp-1",
-          "type": "component",
-          "data": {
-            "id": "coaches-intro"
-          },
-          "tunes": []
+    "draft": {
+        "title": "\u03a0\u03c1\u03bf\u03c0\u03bf\u03bd\u03b7\u03c4\u03ad\u03c2",
+        "textTeaser": "\u0388\u03bc\u03c0\u03b5\u03b9\u03c1\u03bf\u03b9 \u03c0\u03c1\u03bf\u03c0\u03bf\u03bd\u03b7\u03c4\u03ad\u03c2 \u03bc\u03b5 \u03b1\u03b3\u03ac\u03c0\u03b7 \u03b3\u03b9\u03b1 \u03c4\u03bf \u03c0\u03b1\u03b9\u03b4\u03af \u03ba\u03b1\u03b9 \u03c0\u03ac\u03b8\u03bf\u03c2 \u03b3\u03b9\u03b1 \u03c4\u03bf \u03c0\u03bf\u03b4\u03cc\u03c3\u03c6\u03b1\u03b9\u03c1\u03bf.",
+        "private": false,
+        "template": "coaches",
+        "slug": "coaches",
+        "theme": "aokoropi/theme",
+        "+main": {
+            "blocks": [
+                {
+                    "id": "coaches-comp-1",
+                    "type": "component",
+                    "data": {
+                        "id": "coaches-intro"
+                    },
+                    "tunes": {
+                        "layout": {
+                            "stretched": false,
+                            "width": null
+                        }
+                    }
+                },
+                {
+                    "id": "coaches-comp-2",
+                    "type": "component",
+                    "data": {
+                        "id": "coaches-card"
+                    },
+                    "tunes": {
+                        "layout": {
+                            "stretched": false,
+                            "width": null
+                        }
+                    }
+                },
+                {
+                    "id": "D8mbaf-d8y2DN0pyXX3QSmuDT7M3k4aa",
+                    "type": "component",
+                    "data": {
+                        "id": "coaches-card"
+                    },
+                    "tunes": {
+                        "layout": {
+                            "stretched": false,
+                            "width": null
+                        }
+                    }
+                }
+            ]
         },
-        {
-          "id": "coaches-comp-2",
-          "type": "component",
-          "data": {
-            "id": "coaches-card"
-          },
-          "tunes": []
+        ":automadVersion": "2.0.0-beta.28"
+    },
+    "published": {
+        "title": "\u03a0\u03c1\u03bf\u03c0\u03bf\u03bd\u03b7\u03c4\u03ad\u03c2",
+        "textTeaser": "\u0397 \u03c0\u03c1\u03bf\u03c0\u03bf\u03bd\u03b7\u03c4\u03b9\u03ba\u03ae \u03bf\u03bc\u03ac\u03b4\u03b1 \u03c4\u03b7\u03c2 \u03b1\u03ba\u03b1\u03b4\u03b7\u03bc\u03af\u03b1\u03c2 \u03bc\u03b1\u03c2.",
+        "private": false,
+        "template": "coaches",
+        "slug": "coaches",
+        "theme": "aokoropi/theme",
+        "+main": {
+            "blocks": [
+                {
+                    "id": "coaches-comp-1",
+                    "type": "component",
+                    "data": {
+                        "id": "coaches-intro"
+                    },
+                    "tunes": []
+                },
+                {
+                    "id": "coaches-comp-2",
+                    "type": "component",
+                    "data": {
+                        "id": "coaches-card"
+                    },
+                    "tunes": []
+                }
+            ]
         }
-      ]
     }
-  }
 }

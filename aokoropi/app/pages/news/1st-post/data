@@ -1,0 +1,40 @@
+{
+    "draft": {
+        "title": "1ST post",
+        "date": "2026-05-05T20:13",
+        "slug": "1st-post",
+        "textTeaser": "tyjryujfyumfy",
+        "template": "post",
+        "theme": "aokoropi/theme",
+        "private": false,
+        ":created": "2026-05-05T20:13:17+00:00",
+        ":lastModified": "2026-05-05T20:38:34+00:00",
+        ":automadVersion": "2.0.0-beta.28"
+    },
+    "published": {
+        "title": "1ST post",
+        "date": "2026-05-05T20:13",
+        "slug": "1st-post",
+        "+main": {
+            "blocks": [
+                {
+                    "id": "pPdLRGvPnTUbWlLqxiTEERB4YGNPOtRS",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "yukgyi,fykfyikfy,m",
+                        "large": false
+                    },
+                    "tunes": []
+                }
+            ]
+        },
+        "textTeaser": "tyjryujfyumfy\n![](wallp.jpg)\n\n![](wallp.jpg)",
+        "template": "post",
+        "theme": "aokoropi/theme",
+        "private": false,
+        ":created": "2026-05-05T20:13:17+00:00",
+        ":lastModified": "2026-05-05T20:34:08+00:00",
+        ":automadVersion": "2.0.0-beta.28",
+        ":lastPublished": "2026-05-05T20:34:17+00:00"
+    }
+}

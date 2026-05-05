@@ -74,7 +74,6 @@
           </a>
         </article>
       <@ else @>
-        <div class="news-placeholder">Δεν υπάρχουν ακόμα νέα.</div>
       <@ end @>
     </div>
   </section>

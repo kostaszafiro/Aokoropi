@@ -1,13 +1,20 @@
 <@ snippets/header.php @>
+
 <main class="page active" id="programs-page">
   <section class="section">
     <div class="section-header">
       <span class="section-tag">Τμήματα Ακαδημίας</span>
       <h2>@{ title }</h2>
       <div class="gold-line"></div>
-      <@ if @{ textTeaser } @><p class="section-lead">@{ textTeaser }</p><@ end @>
+
+      <@ if @{ textTeaser } @>
+        <p class="section-lead">@{ textTeaser }</p>
+      <@ end @>
     </div>
+
     @{ +main }
-  </section> 
+
+  </section>
 </main>
+
 <@ snippets/footer.php @>

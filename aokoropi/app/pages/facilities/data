@@ -1,31 +1,71 @@
 {
-  "draft": [],
-  "published": {
-    "title": "Εγκαταστάσεις",
-    "textTeaser": "Το γήπεδο και οι υποδομές προπόνησης του ΑΟ Κορωπί.",
-    "private": false,
-    "template": "facilities",
-    "slug": "facilities",
-     "theme": "aokoropi/theme",
-    "+main": {
-      "blocks": [
-        {
-          "id": "facilities-comp-1",
-          "type": "component",
-          "data": {
-            "id": "facilities-intro"
-          },
-          "tunes": []
+    "draft": [],
+    "published": {
+        "title": "\u0395\u03b3\u03ba\u03b1\u03c4\u03b1\u03c3\u03c4\u03ac\u03c3\u03b5\u03b9\u03c2",
+        "slug": "facilities",
+        "+main": {
+            "blocks": [
+                {
+                    "id": "SCgsfiEeurvg1FeJ5QgsWFoz8k5LiePy",
+                    "type": "component",
+                    "data": {
+                        "id": "alJXmPzkFBUAn8dENMRf80LjkaHLdjkD"
+                    },
+                    "tunes": {
+                        "layout": {
+                            "stretched": false,
+                            "width": null
+                        }
+                    }
+                },
+                {
+                    "id": "facilities-comp-1",
+                    "type": "component",
+                    "data": {
+                        "id": "facilities-intro"
+                    },
+                    "tunes": {
+                        "layout": {
+                            "stretched": false,
+                            "width": null
+                        }
+                    }
+                },
+                {
+                    "id": "facilities-comp-2",
+                    "type": "component",
+                    "data": {
+                        "id": "facilities-feature-cards"
+                    },
+                    "tunes": {
+                        "layout": {
+                            "stretched": false,
+                            "width": null
+                        }
+                    }
+                },
+                {
+                    "id": "ZdKYvHugBqw3_Shdcp22OiH0fuxly9Ya",
+                    "type": "component",
+                    "data": {
+                        "id": "puH9Lqs8AVDAYtE84xDFk9VnYVDd3tK2"
+                    },
+                    "tunes": {
+                        "layout": {
+                            "stretched": false,
+                            "width": null
+                        }
+                    }
+                }
+            ]
         },
-        {
-          "id": "facilities-comp-2",
-          "type": "component",
-          "data": {
-            "id": "facilities-feature-cards"
-          },
-          "tunes": []
-        }
-      ]
+        "textTeaser": "\u03a4\u03bf \u03b3\u03ae\u03c0\u03b5\u03b4\u03bf \u03ba\u03b1\u03b9 \u03bf\u03b9 \u03c5\u03c0\u03bf\u03b4\u03bf\u03bc\u03ad\u03c2 \u03c0\u03c1\u03bf\u03c0\u03cc\u03bd\u03b7\u03c3\u03b7\u03c2 \u03c4\u03bf\u03c5 \u0391\u039f \u039a\u03bf\u03c1\u03c9\u03c0\u03af.",
+        "template": "facilities",
+        "theme": "aokoropi/theme",
+        "private": false,
+        ":created": "2026-05-05T19:27:58+00:00",
+        ":lastModified": "2026-05-05T19:51:50+00:00",
+        ":automadVersion": "2.0.0-beta.28",
+        ":lastPublished": "2026-05-05T19:51:55+00:00"
     }
-  }
 }

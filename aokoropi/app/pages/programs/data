@@ -35,19 +35,6 @@
                     }
                 },
                 {
-                    "id": "IH5WJgOg7ceu56NqsaG0ryRRD004oToT",
-                    "type": "component",
-                    "data": {
-                        "id": "programs-card"
-                    },
-                    "tunes": {
-                        "layout": {
-                            "stretched": false,
-                            "width": null
-                        }
-                    }
-                },
-                {
                     "id": "programs-comp-3",
                     "type": "component",
                     "data": {
