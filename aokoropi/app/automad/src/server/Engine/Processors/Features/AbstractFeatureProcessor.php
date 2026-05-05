@@ -1,0 +1,105 @@
+<?php
+/*
+ *                    ....
+ *                  .:   '':.
+ *                  ::::     ':..
+ *                  ::.         ''..
+ *       .:'.. ..':.:::'    . :.   '':.
+ *      :.   ''     ''     '. ::::.. ..:
+ *      ::::.        ..':.. .''':::::  .
+ *      :::::::..    '..::::  :. ::::  :
+ *      ::'':::::::.    ':::.'':.::::  :
+ *      :..   ''::::::....':     ''::  :
+ *      :::::.    ':::::   :     .. '' .
+ *   .''::::::::... ':::.''   ..''  :.''''.
+ *   :..:::'':::::  :::::...:''        :..:
+ *   ::::::. '::::  ::::::::  ..::        .
+ *   ::::::::.::::  ::::::::  :'':.::   .''
+ *   ::: '::::::::.' '':::::  :.' '':  :
+ *   :::   :::::::::..' ::::  ::...'   .
+ *   :::  .::::::::::   ::::  ::::  .:'
+ *    '::'  '':::::::   ::::  : ::  :
+ *              '::::   ::::  :''  .:
+ *               ::::   ::::    ..''
+ *               :::: ..:::: .:''
+ *                 ''''  '''''
+ *
+ *
+ * AUTOMAD
+ *
+ * Copyright (c) 2021-2026 by Marc Anton Dahmen
+ * https://marcdahmen.de
+ *
+ * See LICENSE.md for license information.
+ */
+
+namespace Automad\Engine\Processors\Features;
+
+use Automad\Core\Automad;
+use Automad\Engine\Processors\ContentProcessor;
+use Automad\Engine\Processors\TemplateProcessor;
+
+defined('AUTOMAD') or die('Direct access not permitted!');
+
+/**
+ * The abstract feature processor class. All feature processors based on this class must implement
+ * a `process()` and a static `syntaxPattern()` method.
+ *
+ * @author Marc Anton Dahmen
+ * @copyright Copyright (c) 2021-2026 by Marc Anton Dahmen - https://marcdahmen.de
+ * @license See LICENSE.md for license information
+ */
+abstract class AbstractFeatureProcessor {
+	/**
+	 * The main Automad instance.
+	 */
+	protected Automad $Automad;
+
+	/**
+	 * The content processor instance.
+	 */
+	protected ContentProcessor $ContentProcessor;
+
+	/**
+	 * The feature processor constructor.
+	 *
+	 * @param Automad $Automad
+	 * @param ContentProcessor $ContentProcessor
+	 */
+	public function __construct(
+		Automad $Automad,
+		ContentProcessor $ContentProcessor
+	) {
+		$this->Automad = $Automad;
+		$this->ContentProcessor = $ContentProcessor;
+	}
+
+	/**
+	 * The actual processor that is used to process a template substring
+	 * that matches the pattern returned by the `syntaxPattern()` method.
+	 *
+	 * @param array $matches
+	 * @param string $directory
+	 * @return string
+	 */
+	abstract public function process(array $matches, string $directory): string;
+
+	/**
+	 * The actual pattern that is used to trigger the processor.
+	 *
+	 * @return string
+	 */
+	abstract public static function syntaxPattern(): string;
+
+	/**
+	 * Create a new instance of the template processor.
+	 *
+	 * @return TemplateProcessor the template processor instance
+	 */
+	protected function initTemplateProcessor(): TemplateProcessor {
+		return new TemplateProcessor(
+			$this->Automad,
+			$this->ContentProcessor
+		);
+	}
+}

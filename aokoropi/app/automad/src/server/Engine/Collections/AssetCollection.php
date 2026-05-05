@@ -1,0 +1,77 @@
+<?php
+/*
+ *                    ....
+ *                  .:   '':.
+ *                  ::::     ':..
+ *                  ::.         ''..
+ *       .:'.. ..':.:::'    . :.   '':.
+ *      :.   ''     ''     '. ::::.. ..:
+ *      ::::.        ..':.. .''':::::  .
+ *      :::::::..    '..::::  :. ::::  :
+ *      ::'':::::::.    ':::.'':.::::  :
+ *      :..   ''::::::....':     ''::  :
+ *      :::::.    ':::::   :     .. '' .
+ *   .''::::::::... ':::.''   ..''  :.''''.
+ *   :..:::'':::::  :::::...:''        :..:
+ *   ::::::. '::::  ::::::::  ..::        .
+ *   ::::::::.::::  ::::::::  :'':.::   .''
+ *   ::: '::::::::.' '':::::  :.' '':  :
+ *   :::   :::::::::..' ::::  ::...'   .
+ *   :::  .::::::::::   ::::  ::::  .:'
+ *    '::'  '':::::::   ::::  : ::  :
+ *              '::::   ::::  :''  .:
+ *               ::::   ::::    ..''
+ *               :::: ..:::: .:''
+ *                 ''''  '''''
+ *
+ *
+ * AUTOMAD
+ *
+ * Copyright (c) 2021-2026 by Marc Anton Dahmen
+ * https://marcdahmen.de
+ *
+ * See LICENSE.md for license information.
+ */
+
+namespace Automad\Engine\Collections;
+
+defined('AUTOMAD') or die('Direct access not permitted!');
+
+/**
+ * The extension asset collection class.
+ *
+ * @author Marc Anton Dahmen
+ * @copyright Copyright (c) 2021-2026 by Marc Anton Dahmen - https://marcdahmen.de
+ * @license See LICENSE.md for license information
+ */
+class AssetCollection {
+	/**
+	 * A multidimensional array for .css and .js files.
+	 */
+	private static array $assets = array();
+
+	/**
+	 * Return the asset array.
+	 *
+	 * @return array the collected assets.
+	 */
+	public static function get(): array {
+		return self::$assets;
+	}
+
+	/**
+	 * Multidimensionally merge assets.
+	 *
+	 * @param array $assets
+	 */
+	public static function merge(array $assets): void {
+		// Make sure, $this->assets has a basic structure to enable merging new assets.
+		self::$assets = array_merge(array('.css' => array(), '.js' => array()), self::$assets);
+
+		foreach (array('.css', '.js') as $type) {
+			if (!empty($assets[$type])) {
+				self::$assets[$type] = array_merge(self::$assets[$type], $assets[$type]);
+			}
+		}
+	}
+}

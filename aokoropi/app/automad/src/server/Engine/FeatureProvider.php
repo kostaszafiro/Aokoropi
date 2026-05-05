@@ -1,0 +1,86 @@
+<?php
+/*
+ *                    ....
+ *                  .:   '':.
+ *                  ::::     ':..
+ *                  ::.         ''..
+ *       .:'.. ..':.:::'    . :.   '':.
+ *      :.   ''     ''     '. ::::.. ..:
+ *      ::::.        ..':.. .''':::::  .
+ *      :::::::..    '..::::  :. ::::  :
+ *      ::'':::::::.    ':::.'':.::::  :
+ *      :..   ''::::::....':     ''::  :
+ *      :::::.    ':::::   :     .. '' .
+ *   .''::::::::... ':::.''   ..''  :.''''.
+ *   :..:::'':::::  :::::...:''        :..:
+ *   ::::::. '::::  ::::::::  ..::        .
+ *   ::::::::.::::  ::::::::  :'':.::   .''
+ *   ::: '::::::::.' '':::::  :.' '':  :
+ *   :::   :::::::::..' ::::  ::...'   .
+ *   :::  .::::::::::   ::::  ::::  .:'
+ *    '::'  '':::::::   ::::  : ::  :
+ *              '::::   ::::  :''  .:
+ *               ::::   ::::    ..''
+ *               :::: ..:::: .:''
+ *                 ''''  '''''
+ *
+ *
+ * AUTOMAD
+ *
+ * Copyright (c) 2021-2026 by Marc Anton Dahmen
+ * https://marcdahmen.de
+ *
+ * See LICENSE.md for license information.
+ */
+
+namespace Automad\Engine;
+
+use Automad\Core\FileSystem;
+
+defined('AUTOMAD') or die('Direct access not permitted!');
+
+/**
+ * The feature provider class.
+ *
+ * @author Marc Anton Dahmen
+ * @copyright Copyright (c) 2021-2026 by Marc Anton Dahmen - https://marcdahmen.de
+ * @license See LICENSE.md for license information
+ */
+class FeatureProvider {
+	/**
+	 * An array with names of all existing feature processor classes.
+	 */
+	private static array $processorClasses = array();
+
+	/**
+	 * Return the array of feature processor class names.
+	 *
+	 * @return array the class name array
+	 */
+	public static function getProcessorClasses(): array {
+		if (empty(self::$processorClasses)) {
+			self::$processorClasses = self::findProcessorClasses();
+		}
+
+		return self::$processorClasses;
+	}
+
+	/**
+	 * Find all existing feature processors.
+	 *
+	 * @return array the class name array
+	 */
+	private static function findProcessorClasses(): array {
+		$files = FileSystem::glob(__DIR__ . '/Processors/Features/*.php');
+
+		foreach ($files as $file) {
+			require_once $file;
+		}
+
+		$processorClasses = array_filter(get_declared_classes(), function ($cls) {
+			return (strpos($cls, 'Engine\Processors\Features') !== false && strpos($cls, 'Abstract') === false);
+		});
+
+		return $processorClasses;
+	}
+}

@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => 'automad/automad',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'reference' => null,
+        'type' => 'project',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        'automad/automad' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'reference' => null,
+            'type' => 'project',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'automad/package-installer' => array(
+            'pretty_version' => '1.1.2',
+            'version' => '1.1.2.0',
+            'reference' => '6cefe27a0b7f6fc3432d08e8eeed9e6f6aac0e8b',
+            'type' => 'composer-plugin',
+            'install_path' => __DIR__ . '/../automad/package-installer',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'automad/standard-lite' => array(
+            'pretty_version' => '0.1.12',
+            'version' => '0.1.12.0',
+            'reference' => 'f6e10c04b4fb4986a2693336038f76331c0a1557',
+            'type' => 'automad-package',
+            'install_path' => __DIR__ . '/../../packages/automad/standard-lite',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);

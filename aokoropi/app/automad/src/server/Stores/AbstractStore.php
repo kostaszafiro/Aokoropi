@@ -1,0 +1,240 @@
+<?php
+/*
+ *                    ....
+ *                  .:   '':.
+ *                  ::::     ':..
+ *                  ::.         ''..
+ *       .:'.. ..':.:::'    . :.   '':.
+ *      :.   ''     ''     '. ::::.. ..:
+ *      ::::.        ..':.. .''':::::  .
+ *      :::::::..    '..::::  :. ::::  :
+ *      ::'':::::::.    ':::.'':.::::  :
+ *      :..   ''::::::....':     ''::  :
+ *      :::::.    ':::::   :     .. '' .
+ *   .''::::::::... ':::.''   ..''  :.''''.
+ *   :..:::'':::::  :::::...:''        :..:
+ *   ::::::. '::::  ::::::::  ..::        .
+ *   ::::::::.::::  ::::::::  :'':.::   .''
+ *   ::: '::::::::.' '':::::  :.' '':  :
+ *   :::   :::::::::..' ::::  ::...'   .
+ *   :::  .::::::::::   ::::  ::::  .:'
+ *    '::'  '':::::::   ::::  : ::  :
+ *              '::::   ::::  :''  .:
+ *               ::::   ::::    ..''
+ *               :::: ..:::: .:''
+ *                 ''''  '''''
+ *
+ *
+ * AUTOMAD
+ *
+ * Copyright (c) 2024-2026 by Marc Anton Dahmen
+ * https://marcdahmen.de
+ *
+ * See LICENSE.md for license information.
+ */
+
+namespace Automad\Stores;
+
+use Automad\Core\FileSystem;
+use Automad\Core\PublicationState;
+use Automad\System\Fields;
+
+defined('AUTOMAD') or die('Direct access not permitted!');
+
+/**
+ * A store class handles the reading of JSON formatted data files.
+ *
+ * @author Marc Anton Dahmen
+ * @copyright Copyright (c) 2024-2026 by Marc Anton Dahmen - https://marcdahmen.de
+ * @license See LICENSE.md for license information
+ */
+abstract class AbstractStore {
+	const DATE_FORMAT = 'c';
+
+	/**
+	 * The full data store content.
+	 */
+	private array $data = array();
+
+	/**
+	 * The data store file path.
+	 */
+	private string $file = '';
+
+	/**
+	 * The constructor.
+	 *
+	 * @param ?string $optionalPath
+	 */
+	public function __construct(?string $optionalPath = null) {
+		$this->file = $this->resolvePath($optionalPath);
+
+		if (is_readable($this->file)) {
+			$this->data = FileSystem::readJson($this->file, true);
+		}
+	}
+
+	/**
+	 * Return the data store file path.
+	 *
+	 * @return string
+	 */
+	public function getFile(): string {
+		return $this->file;
+	}
+
+	/**
+	 * Get a state.
+	 *
+	 * @param bool|PublicationState $state
+	 * @return array|null
+	 */
+	public function getState(bool|PublicationState $state): array|null {
+		if (empty($this->data)) {
+			return null;
+		}
+
+		$pubState = is_bool($state) ? ($state ? PublicationState::PUBLISHED : PublicationState::DRAFT) : $state;
+		$data = $this->data[$pubState->value] ?? null;
+
+		if ($pubState == PublicationState::DRAFT && empty($data)) {
+			$pubState = PublicationState::PUBLISHED;
+			$data = $this->getState($pubState);
+		}
+
+		if (!is_null($data)) {
+			$data[Fields::PUBLICATION_STATE] = $pubState->value;
+		}
+
+		return $data;
+	}
+
+	/**
+	 * Returns true if there is no draft.
+	 *
+	 * @return bool
+	 */
+	public function isPublished(): bool {
+		return empty($this->data[PublicationState::DRAFT->value]);
+	}
+
+	/**
+	 * Return the last publication date.
+	 *
+	 * @return string
+	 */
+	public function lastPublished(): string {
+		$published = $this->getState(PublicationState::PUBLISHED);
+
+		return $published[Fields::TIME_LAST_PUBLISHED] ?? '';
+	}
+
+	/**
+	 * Publish a draft.
+	 *
+	 * @return bool
+	 */
+	public function publish(): bool {
+		$draft = $this->getState(PublicationState::DRAFT);
+		$draft[Fields::TIME_LAST_PUBLISHED] = date(self::DATE_FORMAT);
+
+		$this->data = array();
+		$this->setState(PublicationState::DRAFT, array());
+		$this->setState(PublicationState::PUBLISHED, $draft);
+
+		return $this->save();
+	}
+
+	/**
+	 * Save the data store to disk.
+	 *
+	 * @return bool
+	 */
+	public function save(): bool {
+		if ($this->statesAreEqual()) {
+			// If both states contain the same user editable content, remove draft.
+			$this->setState(PublicationState::DRAFT, array());
+		} else {
+			$state = $this->isPublished() ? PublicationState::PUBLISHED : PublicationState::DRAFT;
+			$this->data[$state->value][Fields::AUTOMAD_VERSION] = AM_VERSION;
+		}
+
+		$success = FileSystem::writeJson($this->file, $this->data);
+
+		if ($success && function_exists('opcache_invalidate')) {
+			opcache_invalidate($this->file, true);
+		}
+
+		return $success;
+	}
+
+	/**
+	 * Set the data for a publication state.
+	 *
+	 * @param PublicationState $state
+	 * @param array $data
+	 * @return AbstractStore
+	 */
+	public function setState(PublicationState $state, array $data): AbstractStore {
+		$data = array_map(function ($value) {
+			if (is_string($value)) {
+				return trim($value);
+			}
+
+			return $value;
+		}, $data);
+
+		$data = array_filter($data, function ($value) {
+			if (is_string($value)) {
+				return strlen($value);
+			}
+
+			if (is_array($value) && isset($value['blocks']) && empty($value['blocks'])) {
+				return false;
+			}
+
+			return true;
+		});
+
+		unset($data[Fields::PUBLICATION_STATE]);
+
+		$this->data[$state->value] = $data;
+
+		return $this;
+	}
+
+	/**
+	 * This method is required to set the actual file path for the store on disk.
+	 *
+	 * @param ?string $optionalPath
+	 * @return string
+	 */
+	abstract protected function resolvePath(?string $optionalPath = null): string;
+
+	/**
+	 * Return a new array that only includes user-definable fields.
+	 *
+	 * @param array $data
+	 * @return array
+	 */
+	private function getEditableContent(array $data): array {
+		return array_filter($data, function ($key) {
+			return !str_starts_with($key, ':');
+		}, ARRAY_FILTER_USE_KEY);
+	}
+
+	/**
+	 * Test whether draft and publish states have the same user editable content.
+	 *
+	 * @return bool
+	 */
+	private function statesAreEqual(): bool {
+		$draft = $this->getEditableContent($this->getState(PublicationState::DRAFT) ?? array());
+		$published = $this->getEditableContent($this->getState(PublicationState::PUBLISHED) ?? array());
+
+		ksort($draft);
+		ksort($published);
+
+		return serialize($draft) == serialize($published);
+	}
+}

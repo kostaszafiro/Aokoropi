@@ -1,0 +1,124 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "341d8b1866166c39ee4baf9a4536ba0c",
+    "packages": [
+        {
+            "name": "automad/package-installer",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/automadcms/automad-composer-package-installer.git",
+                "reference": "6cefe27a0b7f6fc3432d08e8eeed9e6f6aac0e8b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/automadcms/automad-composer-package-installer/zipball/6cefe27a0b7f6fc3432d08e8eeed9e6f6aac0e8b",
+                "reference": "6cefe27a0b7f6fc3432d08e8eeed9e6f6aac0e8b",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0||^2.0"
+            },
+            "require-dev": {
+                "composer/composer": "^2.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Automad\\Composer\\PackageInstallerPlugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Automad\\Composer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Anton Dahmen",
+                    "homepage": "https://marcdahmen.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A custom composer installer for Automad packages",
+            "support": {
+                "issues": "https://github.com/automadcms/automad-composer-package-installer/issues",
+                "source": "https://github.com/automadcms/automad-composer-package-installer/tree/1.1.2"
+            },
+            "time": "2020-10-25T21:22:20+00:00"
+        },
+        {
+            "name": "automad/standard-lite",
+            "version": "0.1.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/automadcms/automad-standard-lite.git",
+                "reference": "f6e10c04b4fb4986a2693336038f76331c0a1557"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/automadcms/automad-standard-lite/zipball/f6e10c04b4fb4986a2693336038f76331c0a1557",
+                "reference": "f6e10c04b4fb4986a2693336038f76331c0a1557",
+                "shasum": ""
+            },
+            "require": {
+                "automad/package-installer": "^1.1 || dev-master"
+            },
+            "type": "automad-package",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Anton Dahmen",
+                    "homepage": "https://marcdahmen.de"
+                }
+            ],
+            "description": "The new Standard for Automad version 2",
+            "keywords": [
+                "automad",
+                "blog",
+                "multi-purpose",
+                "portfolio",
+                "theme"
+            ],
+            "support": {
+                "issues": "https://github.com/automadcms/automad-standard-lite/issues",
+                "source": "https://github.com/automadcms/automad-standard-lite/tree/0.1.12"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/marcantondahmen",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/marcantondahmen",
+                    "type": "github"
+                },
+                {
+                    "url": "https://ko-fi.com/marcantondahmen",
+                    "type": "ko_fi"
+                }
+            ],
+            "time": "2026-02-18T16:00:12+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {},
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=8.2"
+    },
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
+}
