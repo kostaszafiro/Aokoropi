@@ -1,0 +1,11 @@
+{
+  "draft": [],
+  "published": {
+    "title": "Νέα",
+    "textTeaser": "Ανακοινώσεις και εξελίξεις από την ακαδημία.",
+    "private": false,
+    "template": "news",
+    "slug": "news",
+    "theme": "aokoropi/theme"
+  }
+}

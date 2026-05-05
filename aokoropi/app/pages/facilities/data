@@ -1,0 +1,11 @@
+{
+  "draft": [],
+  "published": {
+    "title": "Εγκαταστάσεις",
+    "textTeaser": "Το γήπεδο και οι υποδομές προπόνησης του ΑΟ Κορωπί.",
+    "private": false,
+    "template": "facilities",
+    "slug": "facilities",
+    "theme": "aokoropi/theme"
+  }
+}

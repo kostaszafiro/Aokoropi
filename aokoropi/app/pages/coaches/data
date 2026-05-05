@@ -1,0 +1,11 @@
+{
+  "draft": [],
+  "published": {
+    "title": "Προπονητές",
+    "textTeaser": "Η προπονητική ομάδα της ακαδημίας μας.",
+    "private": false,
+    "template": "coaches",
+    "slug": "coaches",
+    "theme": "aokoropi/theme"
+  }
+}
