@@ -1,0 +1,11 @@
+{
+  "draft": [],
+  "published": {
+    "title": "Σχετικά μας",
+    "textTeaser": "Η ιστορία, οι αξίες και η φιλοσοφία της ακαδημίας μας.",
+    "private": false,
+    "template": "about",
+    "slug": "about",
+    "theme": "aokoropi/theme"
+  }
+}

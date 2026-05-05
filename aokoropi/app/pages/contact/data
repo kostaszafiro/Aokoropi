@@ -1,0 +1,11 @@
+{
+  "draft": [],
+  "published": {
+    "title": "Επικοινωνία",
+    "textTeaser": "Στείλτε μας μήνυμα ή επισκεφθείτε το γήπεδο.",
+    "private": false,
+    "template": "contact",
+    "slug": "contact",
+    "theme": "aokoropi/theme"
+  }
+}

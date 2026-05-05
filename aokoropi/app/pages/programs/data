@@ -1,0 +1,11 @@
+{
+  "draft": [],
+  "published": {
+    "title": "Τμήματα",
+    "textTeaser": "Τμήματα υποδομής για κάθε ηλικία και επίπεδο.",
+    "private": false,
+    "template": "programs",
+    "slug": "programs",
+    "theme": "aokoropi/theme"
+  }
+}

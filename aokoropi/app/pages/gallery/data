@@ -1,0 +1,11 @@
+{
+  "draft": [],
+  "published": {
+    "title": "Gallery",
+    "textTeaser": "Φωτογραφίες από αγώνες, προπονήσεις και δράσεις.",
+    "private": false,
+    "template": "gallery",
+    "slug": "gallery",
+    "theme": "aokoropi/theme"
+  }
+}
