@@ -61,6 +61,16 @@
 
       <@ end @>
 
+      <article class="news-card news-add-card" id="newsAddCard">
+        <a href="/dashboard">
+          <div class="news-add-icon">＋</div>
+          <div class="news-card-body">
+            <h3>Προσθήκη νέου post</h3>
+            <p>Πήγαινε στο Dashboard, άνοιξε τη σελίδα Νέα και δημιούργησε νέο child page/post.</p>
+          </div>
+        </a>
+      </article>
+
     </div>
 
   </section>

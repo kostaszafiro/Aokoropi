@@ -3,13 +3,43 @@
         "title": "1ST post",
         "date": "2026-05-05T20:13",
         "slug": "1st-post",
-        "textTeaser": "tyjryujfyumfy",
+        "textTeaser": "1o post",
         "template": "post",
         "theme": "aokoropi/theme",
         "private": false,
         ":created": "2026-05-05T20:13:17+00:00",
         ":lastModified": "2026-05-05T20:38:34+00:00",
-        ":automadVersion": "2.0.0-beta.28"
+        ":automadVersion": "2.0.0-beta.28",
+        "+main": {
+            "blocks": [
+                {
+                    "id": "AY8lzm0VFwAVuolW85NH8ARsSc11GXWN",
+                    "type": "image",
+                    "data": {
+                        "url": "wallp.jpg",
+                        "alt": "",
+                        "link": "",
+                        "openInNewTab": false,
+                        "caption": ""
+                    },
+                    "tunes": {
+                        "layout": {
+                            "stretched": false,
+                            "width": null
+                        }
+                    }
+                },
+                {
+                    "id": "ysxu7aXNt8_decfDVjr8QbE-TJZVUvYP",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "1o post",
+                        "large": false
+                    },
+                    "tunes": []
+                }
+            ]
+        }
     },
     "published": {
         "title": "1ST post",

@@ -1,0 +1,36 @@
+{
+    "draft": [],
+    "published": {
+        "title": "Jose Murinho",
+        "date": "2026-05-11T17:08",
+        "slug": "jose-murinho",
+        "+main": {
+            "blocks": [
+                {
+                    "id": "FWUDAafWPyF5cmrrTiL2kNil3NAH7xru",
+                    "type": "image",
+                    "data": {
+                        "url": "",
+                        "alt": "",
+                        "link": "",
+                        "openInNewTab": false,
+                        "caption": "Champions legaue porto"
+                    },
+                    "tunes": {
+                        "layout": {
+                            "stretched": false,
+                            "width": null
+                        }
+                    }
+                }
+            ]
+        },
+        "template": "coach",
+        "theme": "aokoropi/theme",
+        "private": false,
+        ":created": "2026-05-11T17:08:13+00:00",
+        ":lastModified": "2026-05-11T17:51:27+00:00",
+        ":automadVersion": "2.0.0-beta.28",
+        ":lastPublished": "2026-05-11T17:51:40+00:00"
+    }
+}

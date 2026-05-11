@@ -1,0 +1,15 @@
+{
+    "draft": [],
+    "published": {
+        "title": "7-9",
+        "private": true,
+        "template": "program",
+        "slug": "7-9",
+        "theme": "aokoropi/theme",
+        "date": "2026-05-11T18:06:53+00:00",
+        ":created": "2026-05-11T18:06:53+00:00",
+        ":lastModified": "2026-05-11T18:06:53+00:00",
+        ":automadVersion": "2.0.0-beta.28",
+        ":lastPublished": "2026-05-11T18:07:49+00:00"
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "draft": [],
+    "published": {
+        "title": "2nd post",
+        "private": true,
+        "date": "2026-05-11T16:28",
+        "slug": "2nd-post",
+        "+main": {
+            "blocks": [
+                {
+                    "id": "_aJNR8a0VmHXylVPN7k1z-LbWBPzRg-X",
+                    "type": "image",
+                    "data": {
+                        "url": "wp2506793.jpg",
+                        "alt": "",
+                        "link": "",
+                        "openInNewTab": false,
+                        "caption": ""
+                    },
+                    "tunes": {
+                        "layout": {
+                            "stretched": false,
+                            "width": null
+                        }
+                    }
+                },
+                {
+                    "id": "fzMSLSwKRpr8SM-08AzIGUtbU5QO13wF",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "NEw post 2nd psot",
+                        "large": false
+                    },
+                    "tunes": []
+                }
+            ]
+        },
+        "template": "page_full_width_centered",
+        ":created": "2026-05-11T16:28:15+00:00",
+        ":lastModified": "2026-05-11T16:41:03+00:00",
+        ":automadVersion": "2.0.0-beta.28",
+        ":lastPublished": "2026-05-11T16:41:09+00:00"
+    }
+}

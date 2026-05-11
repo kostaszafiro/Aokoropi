@@ -1,0 +1,13 @@
+{
+    "draft": {
+        "title": "5-6",
+        "private": true,
+        "template": "program",
+        "slug": "5-6",
+        "theme": "aokoropi/theme",
+        "date": "2026-05-11T17:58:41+00:00",
+        ":created": "2026-05-11T17:58:41+00:00",
+        ":lastModified": "2026-05-11T17:58:41+00:00",
+        ":automadVersion": "2.0.0-beta.28"
+    }
+}

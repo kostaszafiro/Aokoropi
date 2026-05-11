@@ -362,6 +362,8 @@ nav.scrolled {
   flex-wrap: wrap;
 }
 
+/* ===== BUTTONS ===== */
+
 .btn-gold {
   background: var(--gold);
   color: var(--navy-dark);
@@ -614,6 +616,62 @@ nav.scrolled {
   background: var(--offwhite);
 }
 
+.facilities-image {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  position: relative;
+  height: 380px;
+}
+
+.facilities-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--lightgray);
+  border-radius: 12px;
+  font-size: 0.95rem;
+}
+
+.facilities-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.facilities-image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(to top, rgba(7, 26, 71, 0.95) 0%, transparent 100%);
+}
+
+.facilities-image-tag {
+  font-family: "Oswald", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.facilities-image-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 1px;
+}
+
 .facilities-intro {
   background: var(--navy);
   border-radius: 12px;
@@ -631,6 +689,7 @@ nav.scrolled {
   width: 300px;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.05));
+  pointer-events: none;
 }
 
 .facilities-intro h3 {
@@ -639,13 +698,19 @@ nav.scrolled {
   font-weight: 700;
   color: var(--white);
   margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
 }
 
-.facilities-intro p {
+.facilities-intro p,
+.facilities-intro .am-block p,
+.facilities-intro p.am-block {
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.9;
   font-size: 0.97rem;
   max-width: 700px;
+  position: relative;
+  z-index: 2;
 }
 
 .facilities-intro .stadium-name {
@@ -705,60 +770,6 @@ nav.scrolled {
 
 .facilities-quote p span {
   color: var(--gold);
-}
-.facilities-image {
-  border-radius: 12px;
-  overflow: hidden;
-  margin-bottom: 2rem;
-  position: relative;
-  height: 380px;
-}
-
-.facilities-image-placeholder {
-  width: 100%;
-  height: 100%;
-  background: var(--white);
-  color: var(--gray);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px dashed var(--lightgray);
-  border-radius: 12px;
-  font-size: 0.95rem;
-}
-
-.facilities-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.facilities-image-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1.5rem 2rem;
-  background: linear-gradient(to top, rgba(7, 26, 71, 0.95) 0%, transparent 100%);
-}
-
-.facilities-image-tag {
-  font-family: "Oswald", sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-bottom: 4px;
-}
-
-.facilities-image-title {
-  font-family: "Oswald", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--white);
-  letter-spacing: 1px;
 }
 
 /* ===== PROGRAMS ===== */
@@ -926,21 +937,6 @@ nav.scrolled {
   align-items: stretch;
 }
 
-/* Automad block/component wrappers fix */
-.coaches-grid > * {
-  min-width: 0;
-}
-
-/* Αν το Automad τυλίγει κάθε component σε extra wrapper, αυτό το αφήνει να μπει σωστά στο grid */
-.coaches-grid > .am-block,
-.coaches-grid > .block,
-.coaches-grid > .component,
-.coaches-grid > .automad-block,
-.coaches-grid > [data-block] {
-  min-width: 0;
-}
-
-/* Κάθε coach card να πιάνει όλο το διαθέσιμο grid column */
 .coach-card {
   width: 100%;
   height: 100%;
@@ -954,6 +950,13 @@ nav.scrolled {
 .coach-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 32px rgba(10, 36, 99, 0.13);
+}
+
+.coach-card a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  height: 100%;
 }
 
 .coach-photo {
@@ -981,12 +984,14 @@ nav.scrolled {
   font-weight: 700;
   color: var(--gold);
   border: 3px solid var(--gold);
+  line-height: 1;
 }
 
 .coach-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .coach-info {
@@ -1016,6 +1021,89 @@ nav.scrolled {
   margin-top: 10px;
 }
 
+.coach-empty-card {
+  border: 2px dashed var(--lightgray);
+}
+
+.coach-add-card {
+  display: none;
+}
+
+body.is-admin .coach-add-card {
+  display: block;
+}
+
+/* ===== SIMPLE COACH PAGE ===== */
+
+.coach-simple-page {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.coach-simple-image {
+  width: 100%;
+  height: 460px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--lightgray);
+  border-bottom: 3px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.coach-simple-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.coach-simple-name {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.coach-simple-role {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+  .coaches-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .coach-simple-image {
+    height: 380px;
+  }
+}
+
+@media (max-width: 600px) {
+  .coaches-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .coach-simple-image {
+    height: 320px;
+  }
+
+  .coach-simple-name {
+    font-size: 1.9rem;
+  }
+}
 
 /* ===== GALLERY ===== */
 
@@ -1081,128 +1169,193 @@ nav.scrolled {
   background: var(--offwhite);
 }
 
-.news-grid {
+.news-grid-full {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
+  align-items: stretch;
 }
 
-.news-main {
+#news-page .news-grid-full > am-inpage-edit {
+  display: contents;
+}
+
+#news-page .news-grid-full > .am-block,
+#news-page .news-grid-full > am-inpage-edit > .am-block {
+  min-width: 0;
+  width: 100%;
+}
+
+#news-page .news-grid-full am-raw {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#news-page .news-grid-full > am-inpage-edit > .am-block:has(> p:empty),
+#news-page .news-grid-full > .am-block:has(> p:empty) {
+  display: none;
+}
+
+.news-card {
+  width: 100%;
+  height: 100%;
   background: var(--white);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 2px 12px rgba(10, 36, 99, 0.06);
+  border-left: 4px solid var(--gold);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.news-main-img {
-  height: 260px;
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(10, 36, 99, 0.12);
+}
+
+.news-card a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+}
+
+.news-card-img {
+  width: 100%;
+  height: 190px;
   background: var(--navy);
+  overflow: hidden;
+}
+
+.news-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.news-card-img-placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  color: var(--gold);
+  font-size: 2.4rem;
 }
 
-.news-main-img img {
-  height: 80px;
-  opacity: 0.3;
-}
-
-.news-category {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background: var(--gold);
-  color: var(--navy-dark);
-  font-family: "Oswald", sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  padding: 5px 12px;
-  border-radius: 2px;
-  text-transform: uppercase;
-}
-
-.news-main-body {
-  padding: 1.8rem;
+.news-card-body {
+  padding: 1.5rem;
 }
 
 .news-date {
   font-size: 12px;
   color: var(--gray2);
   letter-spacing: 1px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 
-.news-main-body h3 {
+.news-card-body h3 {
   font-family: "Oswald", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--navy);
   margin-bottom: 0.75rem;
 }
 
-.news-main-body p {
-  font-size: 0.93rem;
+.news-card-body p {
+  font-size: 0.9rem;
   color: var(--gray);
-  line-height: 1.8;
-}
-
-.news-sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.news-card {
-  background: var(--white);
-  border-radius: 10px;
-  padding: 1.2rem;
-  box-shadow: 0 2px 8px rgba(10, 36, 99, 0.05);
-  border-left: 4px solid var(--gold);
-}
-
-.news-card .news-date {
-  margin-bottom: 6px;
-}
-
-.news-card h4 {
-  font-family: "Oswald", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--navy);
-}
-
-.news-card p {
-  font-size: 0.85rem;
-  color: var(--gray);
-  margin-top: 6px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .news-placeholder {
-  background: var(--offwhite);
+  background: var(--white);
   border: 2px dashed var(--lightgray);
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 1.5rem;
-  text-align: center;
   color: var(--gray2);
   font-size: 0.9rem;
 }
 
-.news-main a,
-.news-card a {
-  color: inherit;
-  text-decoration: none;
+/* Add new post card */
+.news-add-card {
+  display: none;
+  border: 2px dashed var(--lightgray);
+  border-left: 4px solid var(--gold);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+body.is-admin .news-add-card {
   display: block;
 }
 
-/* ===== POST CONTENT ===== */
+.news-add-card a {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.news-add-icon {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 4rem;
+  color: var(--gold);
+  background: rgba(10, 36, 99, 0.04);
+}
+
+/* ===== SINGLE POST ===== */
+
+.post-single {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.post-header {
+  margin-bottom: 2rem;
+}
+
+.post-date {
+  font-family: "Oswald", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray2);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.post-hero-image {
+  width: 100%;
+  height: 420px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  background: var(--navy);
+}
+
+.post-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 .post-content {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 2px 12px rgba(10, 36, 99, 0.06);
   font-size: 1rem;
   line-height: 1.9;
   color: var(--gray);
+}
+
+.post-content p {
+  margin-bottom: 1rem;
 }
 
 .post-content h1,
@@ -1214,13 +1367,18 @@ nav.scrolled {
   margin: 1.5rem 0 1rem;
 }
 
-.post-content p {
-  margin-bottom: 1rem;
-}
-
 .post-content img {
   max-width: 100%;
   border-radius: 10px;
+}
+
+.post-content a {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.post-back {
+  margin-top: 3rem;
 }
 
 /* ===== CONTACT ===== */
@@ -1497,12 +1655,13 @@ footer {
     position: static;
   }
 
-  .coaches-grid {
+  .coaches-grid,
+  #coaches-page .coaches-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .news-grid {
-    grid-template-columns: 1fr;
+  .news-grid-full {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .facilities-cards {
@@ -1532,12 +1691,18 @@ footer {
   .stat-num {
     font-size: 1.8rem;
   }
+
+  .post-hero-image {
+    height: 320px;
+  }
 }
 
 @media (max-width: 600px) {
   .coaches-grid,
+  #coaches-page .coaches-grid,
   .facilities-cards,
-  .gallery-grid {
+  .gallery-grid,
+  .news-grid-full {
     grid-template-columns: 1fr;
   }
 
@@ -1568,504 +1733,6 @@ footer {
   .section {
     padding: 3rem 1rem;
   }
-}
-
-/* ===== AUTOMAD COACHES GRID FIX ===== */
-
-#coaches-page .coaches-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  align-items: stretch;
-}
-
-/*
-  Automad in-page editor wrapper.
-  Χωρίς αυτό, το grid βλέπει μόνο το am-inpage-edit ως ένα item.
-*/
-#coaches-page .coaches-grid > am-inpage-edit {
-  display: contents;
-}
-
-/*
-  Κάθε Automad block γίνεται grid item.
-*/
-#coaches-page .coaches-grid > .am-block,
-#coaches-page .coaches-grid > am-inpage-edit > .am-block {
-  min-width: 0;
-  width: 100%;
-}
-
-/*
-  Το raw wrapper δεν πρέπει να χαλάει το card layout.
-*/
-#coaches-page .coaches-grid am-raw {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-/*
-  Το ίδιο το card πιάνει όλο το grid column.
-*/
-#coaches-page .coach-card {
-  width: 100%;
-  height: 100%;
-}
-
-/*
-  Κρύβει άδεια paragraph blocks που βάζει το Automad.
-  Στο HTML σου υπάρχει αυτό:
-  <div class="am-block"><p class="am-block"></p></div>
-*/
-#coaches-page .coaches-grid > am-inpage-edit > .am-block:has(> p:empty),
-#coaches-page .coaches-grid > .am-block:has(> p:empty) {
-  display: none;
-}
-
-/* Tablet */
-@media (max-width: 900px) {
-  #coaches-page .coaches-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  #coaches-page .coaches-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ===== NEWS LIST PAGE ===== */
-
-.news-grid-full {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-}
-
-.news-card {
-  background: var(--white);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 12px rgba(10, 36, 99, 0.06);
-  border-left: 4px solid var(--gold);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.news-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(10, 36, 99, 0.12);
-}
-
-.news-card a {
-  color: inherit;
-  text-decoration: none;
-  display: block;
-  height: 100%;
-}
-
-.news-card-img {
-  height: 190px;
-  background: var(--navy);
-  overflow: hidden;
-}
-
-.news-card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.news-card-img-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gold);
-  font-size: 2.4rem;
-}
-
-.news-card-body {
-  padding: 1.5rem;
-}
-
-.news-card-body .news-date {
-  font-size: 12px;
-  color: var(--gray2);
-  letter-spacing: 1px;
-  margin-bottom: 0.6rem;
-}
-
-.news-card-body h3 {
-  font-family: "Oswald", sans-serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 0.75rem;
-}
-
-.news-card-body p {
-  font-size: 0.9rem;
-  color: var(--gray);
-  line-height: 1.7;
-}
-
-/* ===== SINGLE POST ===== */
-
-.post-single {
-  max-width: 850px;
-  margin: 0 auto;
-}
-
-.post-hero-image {
-  width: 100%;
-  height: 420px;
-  border-radius: 12px;
-  overflow: hidden;
-  margin-bottom: 2.5rem;
-}
-
-.post-hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.post-content {
-  font-size: 1rem;
-  line-height: 1.9;
-  color: var(--gray);
-}
-
-.post-content p {
-  margin-bottom: 1rem;
-}
-
-.post-content h1,
-.post-content h2,
-.post-content h3,
-.post-content h4 {
-  font-family: "Oswald", sans-serif;
-  color: var(--navy);
-  margin: 1.5rem 0 1rem;
-}
-
-.post-content img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-/* ===== RESPONSIVE NEWS ===== */
-
-@media (max-width: 900px) {
-  .news-grid-full {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .post-hero-image {
-    height: 320px;
-  }
-}
-
-@media (max-width: 600px) {
-  .news-grid-full {
-    grid-template-columns: 1fr;
-  }
-
-  .post-hero-image {
-    height: 240px;
-  }
-}
-
-/* ===== NEWS CARDS GRID ===== */
-
-#news-page {
-  background: var(--offwhite);
-}
-
-.news-grid-full {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  align-items: stretch;
-}
-
-/* Automad in-page editor wrapper fix */
-#news-page .news-grid-full > am-inpage-edit {
-  display: contents;
-}
-
-/* Automad block wrappers */
-#news-page .news-grid-full > .am-block,
-#news-page .news-grid-full > am-inpage-edit > .am-block {
-  min-width: 0;
-  width: 100%;
-}
-
-/* Raw wrapper */
-#news-page .news-grid-full am-raw {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-/* Hide empty Automad paragraph blocks */
-#news-page .news-grid-full > am-inpage-edit > .am-block:has(> p:empty),
-#news-page .news-grid-full > .am-block:has(> p:empty) {
-  display: none;
-}
-
-.news-card {
-  width: 100%;
-  height: 100%;
-  background: var(--white);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 12px rgba(10, 36, 99, 0.06);
-  border-left: 4px solid var(--gold);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.news-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(10, 36, 99, 0.12);
-}
-
-.news-card a {
-  color: inherit;
-  text-decoration: none;
-  display: block;
-  height: 100%;
-}
-
-.news-card-img {
-  height: 190px;
-  background: var(--navy);
-  overflow: hidden;
-}
-
-.news-card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.news-card-img-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gold);
-  font-size: 2.4rem;
-}
-
-.news-card-body {
-  padding: 1.5rem;
-}
-
-.news-card-body .news-date {
-  font-size: 12px;
-  color: var(--gray2);
-  letter-spacing: 1px;
-  margin-bottom: 0.6rem;
-}
-
-.news-card-body h3 {
-  font-family: "Oswald", sans-serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 0.75rem;
-}
-
-.news-card-body p {
-  font-size: 0.9rem;
-  color: var(--gray);
-  line-height: 1.7;
-}
-
-/* Tablet */
-@media (max-width: 900px) {
-  .news-grid-full {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .news-grid-full {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-
-/* ===== NEWS AUTO CARDS ===== */
-
-#news-page {
-  background: var(--offwhite);
-}
-
-.news-grid-full {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  align-items: stretch;
-}
-
-.news-card {
-  width: 100%;
-  height: 100%;
-  background: var(--white);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 12px rgba(10, 36, 99, 0.06);
-  border-left: 4px solid var(--gold);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.news-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(10, 36, 99, 0.12);
-}
-
-.news-card a {
-  color: inherit;
-  text-decoration: none;
-  display: block;
-  height: 100%;
-}
-
-.news-card-img {
-  height: 190px;
-  background: var(--navy);
-  overflow: hidden;
-}
-
-.news-card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.news-card-img-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gold);
-  font-size: 2.4rem;
-}
-
-.news-card-body {
-  padding: 1.5rem;
-}
-
-.news-card-body .news-date {
-  font-size: 12px;
-  color: var(--gray2);
-  letter-spacing: 1px;
-  margin-bottom: 0.6rem;
-}
-
-.news-card-body h3 {
-  font-family: "Oswald", sans-serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 0.75rem;
-}
-
-.news-card-body p {
-  font-size: 0.9rem;
-  color: var(--gray);
-  line-height: 1.7;
-}
-
-/* ===== SINGLE POST ===== */
-
-.post-single {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.post-header {
-  margin-bottom: 2rem;
-}
-
-.post-date {
-  font-family: "Oswald", sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--gray2);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 0.75rem;
-}
-
-.post-hero-image {
-  width: 100%;
-  height: 420px;
-  border-radius: 12px;
-  overflow: hidden;
-  margin-bottom: 2.5rem;
-  background: var(--navy);
-}
-
-.post-hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.post-content {
-  background: var(--white);
-  border-radius: 12px;
-  padding: 2.5rem;
-  box-shadow: 0 2px 12px rgba(10, 36, 99, 0.06);
-  font-size: 1rem;
-  line-height: 1.9;
-  color: var(--gray);
-}
-
-.post-content p {
-  margin-bottom: 1rem;
-}
-
-.post-content h1,
-.post-content h2,
-.post-content h3,
-.post-content h4 {
-  font-family: "Oswald", sans-serif;
-  color: var(--navy);
-  margin: 1.5rem 0 1rem;
-}
-
-.post-content img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-.post-back {
-  margin-top: 3rem;
-}
-
-/* ===== RESPONSIVE NEWS ===== */
-
-@media (max-width: 900px) {
-  .news-grid-full {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .post-hero-image {
-    height: 320px;
-  }
-}
-
-@media (max-width: 600px) {
-  .news-grid-full {
-    grid-template-columns: 1fr;
-  }
 
   .post-hero-image {
     height: 240px;
@@ -2074,4 +1741,718 @@ footer {
   .post-content {
     padding: 1.5rem;
   }
+
+  /* ===== ADD NEW COACH CARD ===== */
+
+.coach-add-card {
+  display: none;
+}
+
+body.is-admin .coach-add-card {
+  display: block;
+}
+
+.coach-add-card a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+}
+
+/* ===== COACHES LIST ===== */
+
+#coaches-page {
+  background: var(--offwhite);
+}
+
+.coaches-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.coach-card {
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(10, 36, 99, 0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.coach-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 32px rgba(10, 36, 99, 0.13);
+}
+
+.coach-card a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+}
+
+.coach-photo {
+  width: 100%;
+  height: 220px;
+  background: var(--lightgray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid var(--gold);
+  position: relative;
+  overflow: hidden;
+}
+
+.coach-photo-placeholder {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--gold);
+  border: 3px solid var(--gold);
+  line-height: 1;
+}
+
+.coach-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.coach-info {
+  padding: 1.5rem;
+}
+
+.coach-name {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.coach-role {
+  font-size: 12px;
+  color: var(--gold);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+.coach-bio {
+  font-size: 0.88rem;
+  color: var(--gray);
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+/* ===== ADD COACH CARD ===== */
+
+.coach-add-card {
+  display: none;
+}
+
+body.is-admin .coach-add-card {
+  display: block;
+}
+
+/* Αν θέλεις να φαίνεται πάντα, χρησιμοποίησε αυτό αντί για τα δύο από πάνω:
+.coach-add-card {
+  display: block;
+}
+*/
+
+.coach-empty-card {
+  border: 2px dashed var(--lightgray);
+}
+
+/* ===== SINGLE COACH PAGE ===== */
+
+.coach-single {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.coach-single-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.coach-single-photo {
+  width: 100%;
+  height: 420px;
+  background: var(--lightgray);
+  border-radius: 12px;
+  overflow: hidden;
+  border-bottom: 3px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coach-single-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coach-single-content {
+  min-width: 0;
+}
+
+.coach-single-teaser {
+  font-size: 1.05rem;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== RESPONSIVE COACHES ===== */
+
+@media (max-width: 900px) {
+  .coaches-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .coach-single-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .coach-single-photo {
+    height: 360px;
+  }
+}
+
+@media (max-width: 600px) {
+  .coaches-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .coach-single-photo {
+    height: 280px;
+  }
+}
+/* ===== SIMPLE COACH PAGE ===== */
+
+.coach-simple-page {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.coach-simple-image {
+  width: 100%;
+  height: 460px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--lightgray);
+  border-bottom: 3px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.coach-simple-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coach-simple-name {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.coach-simple-role {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 600px) {
+  .coach-simple-image {
+    height: 320px;
+  }
+
+  .coach-simple-name {
+    font-size: 1.9rem;
+  }
+}
+/* ===== PROGRAMS DYNAMIC PAGES ===== */
+
+#programs-page {
+  background: var(--white);
+}
+
+.programs-intro {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.programs-intro p {
+  font-size: 0.95rem;
+  color: var(--gray);
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.prog-card {
+  background: var(--offwhite);
+  border-radius: 10px;
+  padding: 2rem;
+  border-left: 5px solid var(--gold);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+  min-height: 230px;
+}
+
+.prog-card::after {
+  content: attr(data-age);
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+  font-family: "Oswald", sans-serif;
+  font-size: 80px;
+  font-weight: 800;
+  color: rgba(10, 36, 99, 0.05);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.prog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(10, 36, 99, 0.1);
+}
+
+.prog-card a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.prog-age {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.prog-name {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 4px 0 12px;
+}
+
+.prog-desc {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+.prog-detail {
+  font-size: 0.88rem;
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+
+.prog-detail-label {
+  font-family: "Oswald", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-right: 5px;
+}
+
+.prog-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.prog-tag {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  background: rgba(10, 36, 99, 0.07);
+  color: var(--navy);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.program-add-card {
+  display: none;
+}
+
+body.is-admin .program-add-card {
+  display: block;
+}
+
+/* ===== SINGLE PROGRAM PAGE ===== */
+
+.program-profile-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(10, 36, 99, 0.07);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.program-profile-image {
+  width: 100%;
+  height: 420px;
+  background: var(--lightgray);
+  border-bottom: 3px solid var(--gold);
+  overflow: hidden;
+}
+
+.program-profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.program-profile-content {
+  padding: 2.5rem;
+}
+
+.program-profile-top {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.program-profile-age {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.program-profile-top h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.program-profile-code {
+  font-family: "Oswald", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.program-profile-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.program-profile-detail {
+  background: var(--offwhite);
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+}
+
+.program-profile-detail span {
+  display: block;
+  font-family: "Oswald", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.4rem;
+}
+
+.program-profile-detail p {
+  color: var(--gray);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.program-main-content {
+  margin-top: 2rem;
+}
+
+/* ===== ACADEMY PHILOSOPHY ===== */
+
+.academy-philosophy {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+  border-radius: 12px;
+  padding: 3rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.philosophy-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.academy-philosophy h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.academy-philosophy p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.97rem;
+  line-height: 1.8;
+  max-width: 640px;
+  margin: 0 auto 1rem;
+}
+
+.philosophy-quote {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(201, 168, 76, 0.3);
+}
+
+@media (max-width: 900px) {
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .program-profile-image {
+    height: 320px;
+  }
+
+  .program-profile-content {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .program-profile-image {
+    height: 240px;
+  }
+
+  .program-profile-content {
+    padding: 1.5rem;
+  }
+
+  .program-profile-top h1 {
+    font-size: 1.8rem;
+  }
+}
+/* ===== PROGRAMS FINAL FIX ===== */
+
+#programs-page {
+  background: var(--white);
+}
+
+#programs-page .programs-intro {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+#programs-page .programs-intro p {
+  font-size: 0.95rem;
+  color: var(--gray);
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+#programs-page .programs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+#programs-page .prog-card {
+  background: var(--offwhite);
+  border-radius: 10px;
+  padding: 2rem;
+  border-left: 5px solid var(--gold);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+  min-height: 230px;
+}
+
+#programs-page .prog-card::after {
+  content: attr(data-age);
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+  font-family: "Oswald", sans-serif;
+  font-size: 80px;
+  font-weight: 800;
+  color: rgba(10, 36, 99, 0.05);
+  line-height: 1;
+  pointer-events: none;
+}
+
+#programs-page .prog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(10, 36, 99, 0.1);
+}
+
+#programs-page .program-card-link {
+  color: inherit !important;
+  text-decoration: none !important;
+  display: block;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+#programs-page .program-card-link:hover,
+#programs-page .program-card-link:visited,
+#programs-page .program-card-link:active {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+#programs-page .prog-age {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--navy) !important;
+  line-height: 1;
+  margin-bottom: 0.35rem;
+  text-decoration: none !important;
+}
+
+#programs-page .prog-title {
+  display: block;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--navy) !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 6px;
+  line-height: 1.2;
+  text-decoration: none !important;
+}
+
+#programs-page .prog-code {
+  font-family: "Oswald", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold) !important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+  text-decoration: none !important;
+}
+
+#programs-page .prog-desc {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+#programs-page .prog-detail {
+  font-size: 0.88rem;
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+
+#programs-page .prog-detail-label {
+  font-family: "Oswald", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-right: 5px;
+}
+
+#programs-page .prog-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+#programs-page .prog-tag {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  background: rgba(10, 36, 99, 0.07);
+  color: var(--navy);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+#programs-page .program-add-card {
+  display: none;
+}
+
+body.is-admin #programs-page .program-add-card {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  #programs-page .programs-grid {
+    grid-template-columns: 1fr;
+  }
+}
 }

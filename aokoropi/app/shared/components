@@ -207,7 +207,12 @@
                         "data": {
                             "code": "<div class=\"whatsapp-cta\"><h3>\u0395\u03b3\u03b3\u03c1\u03b1\u03c6\u03ae & \u03a0\u03bb\u03b7\u03c1\u03bf\u03c6\u03bf\u03c1\u03af\u03b5\u03c2</h3><p>\u0395\u03c0\u03b9\u03ba\u03bf\u03b9\u03bd\u03ce\u03bd\u03b7\u03c3\u03b5 \u03bc\u03b1\u03b6\u03af \u03bc\u03b1\u03c2 \u03ac\u03bc\u03b5\u03c3\u03b1 \u03bc\u03ad\u03c3\u03c9 WhatsApp \u03ae \u03c4\u03b7\u03bb\u03b5\u03c6\u03c9\u03bd\u03b9\u03ba\u03ac.</p><a href=\"https://wa.me/306996971765\" target=\"_blank\" class=\"btn-whatsapp\">\ud83d\udcac \u039c\u03ae\u03bd\u03c5\u03bc\u03b1 \u03c3\u03c4\u03bf WhatsApp</a><a href=\"tel:6996971765\" class=\"btn-call\">\ud83d\udcde \u039a\u03ac\u03bb\u03b5\u03c3\u03b5 \u03bc\u03b1\u03c2 \u03a4\u03ce\u03c1\u03b1</a></div>"
                         },
-                        "tunes": []
+                        "tunes": {
+                            "layout": {
+                                "stretched": false,
+                                "width": null
+                            }
+                        }
                     }
                 ],
                 "collapsed": false
@@ -271,15 +276,9 @@
                     }
                 ],
                 "collapsed": false
-            },
-            {
-                "id": "ydJPPsrTTjrF7nxb0sqgTHdvS4VVX0xW",
-                "name": "",
-                "blocks": [],
-                "collapsed": false
             }
         ],
         ":automadVersion": "2.0.0-beta.28",
-        ":lastPublished": "2026-05-05T20:04:54+00:00"
+        ":lastPublished": "2026-05-11T16:45:30+00:00"
     }
 }
